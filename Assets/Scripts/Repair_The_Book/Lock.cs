@@ -16,7 +16,7 @@ public class Lock : MonoBehaviour
     void ToggleLeft()
     {
         CardLeft.SetActive(true);
-        
+        print("LErft");
     }
 
     void ToggleRight()
@@ -25,10 +25,10 @@ public class Lock : MonoBehaviour
  
     }
 
-    public void OnTriggerEnter(Collider other)
+    public void OnCollisionEnter(Collision other)
     {
 
-        //Debug.Log("aaaaaaaaaa");
+        Debug.Log("aaaaaaaaaa");
         if (other.gameObject.tag == "Left")
         {
             Debug.Log("Im the left");
