@@ -8,6 +8,11 @@ TagManager:
   - Right
   - Left_Drop
   - Right_Drop
+  - Incorrect_Ingredient
+  - Correct_Ingredient
+  - Book
+  - Shield
+  - BossProjectile
   layers:
   - Default
   - TransparentFX
