@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent(typeof(Rigidbody))]
 public class Drag : MonoBehaviour
 {
     public delegate void DragEndedDelegate(Drag draggableObject);

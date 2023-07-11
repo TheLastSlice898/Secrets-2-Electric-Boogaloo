@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-
 public class Lock : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -11,24 +10,29 @@ public class Lock : MonoBehaviour
 
     void OnDestroy()
     {
-
+        //Debug.Log("Bye");
     }
     void ToggleLeft()
     {
         CardLeft.SetActive(true);
-        print("LErft");
+        
     }
 
     void ToggleRight()
     {
         CardRight.SetActive(true);
- 
+
     }
 
-    public void OnCollisionEnter(Collision other)
+
+
+    //On trigger enter means when the colliders then it will do something 
+    // that something is if the gameobject is tagged as "LEFT" or "RIGHT" then it will destrig the dragged object, and toggle the hidden static page
+    // the static page acts like a "drag and lock", so player are unable to move it once placed 
+    public void OnTriggerEnter(Collider other)
     {
 
-        Debug.Log("aaaaaaaaaa");
+        //Debug.Log("aaaaaaaaaa");
         if (other.gameObject.tag == "Left")
         {
             Debug.Log("Im the left");
