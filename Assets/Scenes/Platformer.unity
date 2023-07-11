@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3638976, g: 0.43826097, b: 0.5349084, a: 1}
+  m_IndirectSpecularColor: {r: 0.36389726, g: 0.4382602, b: 0.5349077, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -290,11 +290,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerRB: {fileID: 525396878}
   PlayerOBJ: {fileID: 525396876}
-  MaxSpeed: 0.5
+  MaxSpeed: 20
   JumpHeight: 21
   HasJumped: 0
   DoubleJump: 0
-  playerForce: 2
+  playerForce: 15
 --- !u!54 &525396878
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -605,13 +605,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 795397526}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21faecbc9c840584db6d6c5c9757957f, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e517192901e2434185d49d0f127c8de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CamTrans: {fileID: 884998124}
   PlayerLook: {fileID: 884998124}
   distancethreshold: 0
-  Speed: 2
+  Speed: 20
 --- !u!1 &884998123
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,7 +636,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884998123}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.42, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

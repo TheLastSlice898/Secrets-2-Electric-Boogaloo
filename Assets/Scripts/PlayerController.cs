@@ -23,28 +23,21 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
-        if (Input.GetKeyDown(KeyCode.Space))
+        float MoveX = Input.GetAxis("Horizontal");
+        Debug.Log(MoveX);
+        PlayerRB.velocity = new Vector3(MoveX * playerForce,PlayerRB.velocity.y,PlayerRB.velocity.z);
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             Jump();
         }
-        Debug.Log(PlayerRB.velocity.x);
+    }
+        //Debug.Log(PlayerRB.velocity.magnitude);
 //fuck off cam
-     if(PlayerRB.velocity.x > MaxSpeed)
-     {
-        PlayerRB.velocity.Set(PlayerRB.velocity.x,PlayerRB.velocity.y,PlayerRB.velocity.z);
-     }
+//yea fuck cam
+    
 
-
-    }
-    void Move()
-    {
-
-            //make this a rb.addforce
-
-        float MoveX = Input.GetAxis("Horizontal");
-        PlayerRB.AddForce(new Vector3((MoveX * playerForce),0,0), ForceMode.Impulse);       
-    }
+    
+    //Debug.Log(PlayerRB.velocity);
     void Jump()
     {
        if (HasJumped)
@@ -55,8 +48,9 @@ public class PlayerController : MonoBehaviour
        }
        else if (DoubleJump)
        {
-         PlayerRB.AddForce((Vector3.up * JumpHeight), ForceMode.Impulse);
-         DoubleJump = false;
+        PlayerRB.velocity.Set(0f,0f,0f);
+        PlayerRB.AddForce((Vector3.up * JumpHeight), ForceMode.Impulse);
+        DoubleJump = false;
        }
       
     }
