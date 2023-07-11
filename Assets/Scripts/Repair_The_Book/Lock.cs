@@ -36,13 +36,13 @@ public class Lock : MonoBehaviour
         if (other.gameObject.tag == "Left")
         {
             Debug.Log("Im the left");
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
             ToggleLeft();
         }
         if (other.gameObject.tag == "Right")
         {
             Debug.Log("Im the right");
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
             ToggleRight();
         }
     }
