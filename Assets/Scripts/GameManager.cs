@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
 
     public string SceneName;
+    public
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -17,6 +18,11 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         WhatSceneAmI();
+    }
+
+    public void ResetScene()
+    {
+        SceneManager.LoadScene(SceneName);
     }
 
     public void WhatSceneAmI()
