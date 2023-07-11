@@ -14,7 +14,9 @@ public class CameraTrackFlat : MonoBehaviour
     {
         if (Vector3.Distance(CamTrans.position, gameObject.transform.position) > distancethreshold)
         {
-           transform.position = Vector3.MoveTowards(transform.position, CamTrans.position, Speed);
+            //this below is sex!!! I MADE THIS SLICE MDADE THIS WHILE MAKING A SMOOOTHIE
+            //what do you have their....A SMOOTHIIE!
+           transform.position = Vector3.MoveTowards(transform.position, CamTrans.position, Speed * (Time.deltaTime * (Vector3.Distance(CamTrans.position, gameObject.transform.position))));
            transform.position = new Vector3(transform.position.x, transform.position.y,-27f);
         }
         

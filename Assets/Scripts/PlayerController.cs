@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         //Debug.Log(PlayerRB.velocity.magnitude);
 //fuck off cam
 //yea fuck cam
-    
+//<3 you cam
 
     
     //Debug.Log(PlayerRB.velocity);
