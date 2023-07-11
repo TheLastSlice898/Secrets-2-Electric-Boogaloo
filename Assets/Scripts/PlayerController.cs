@@ -30,11 +30,12 @@ public class PlayerController : MonoBehaviour
         }
         Debug.Log(PlayerRB.velocity.x);
 //fuck off cam
-     if(PlayerRB.velocity.x > MaxSpeed)
+     //if(PlayerRB.velocity.x > MaxSpeed)
      {
-        PlayerRB.velocity.Set(PlayerRB.velocity.x,PlayerRB.velocity.y,PlayerRB.velocity.z);
+        //PlayerRB.velocity.Set(PlayerRB.velocity.x,PlayerRB.velocity.y,PlayerRB.velocity.z);
      }
-
+     
+            
 
     }
     void Move()
@@ -43,23 +44,29 @@ public class PlayerController : MonoBehaviour
             //make this a rb.addforce
 
         float MoveX = Input.GetAxis("Horizontal");
-        PlayerRB.AddForce(new Vector3((MoveX * playerForce),0,0), ForceMode.Impulse);       
+        PlayerRB.AddForce(new Vector3((MoveX * playerForce),0,0), ForceMode.Impulse);
     }
     void Jump()
     {
-       if (HasJumped)
-       {
-        PlayerRB.AddForce((Vector3.up * JumpHeight), ForceMode.Impulse);
-        HasJumped = false;
-        DoubleJump = true;
-       }
-       else if (DoubleJump)
-       {
-         PlayerRB.AddForce((Vector3.up * JumpHeight), ForceMode.Impulse);
-         DoubleJump = false;
-       }
-      
+        if (HasJumped)
+        {
+            PlayerRB.AddForce((Vector3.up * JumpHeight), ForceMode.Impulse);
+            HasJumped = false;
+            DoubleJump = true;
+        }
+        else if (DoubleJump)
+        {
+            PlayerRB.AddForce((Vector3.up * JumpHeight), ForceMode.Impulse);
+            DoubleJump = false;
+        }
+
     }
+
+    void ThatsCap()
+    {
+
+    }
+
     void OnCollisionEnter(Collision Collider)
     {
         if (HasJumped == false)
