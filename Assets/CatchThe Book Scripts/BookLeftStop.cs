@@ -18,7 +18,7 @@ public class BookLeftStop : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Left Trigger entered");
+        //Debug.Log("Left Trigger entered");
         other.gameObject.GetComponent<CatchTheBook>().MoveBookLeft();
         other.gameObject.GetComponent<CatchTheBook>().RandomiseFlyTime();
         other.gameObject.GetComponent<CatchTheBook>().BookIsFlying = false;
