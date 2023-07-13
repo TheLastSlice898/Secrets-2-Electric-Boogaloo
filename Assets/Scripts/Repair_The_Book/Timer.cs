@@ -29,7 +29,7 @@ public class Timer : MonoBehaviour
                 Debug.Log("you lose");
                 timeLeft = 0;
                 timerOn = false;
-                
+                SceneManager.LoadScene("Repair_The_Book(Bella)");
 
             }
         }
