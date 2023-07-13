@@ -6,8 +6,6 @@ TagManager:
   tags:
   - Left
   - Right
-  - Left_Drop
-  - Right_Drop
   layers:
   - Default
   - TransparentFX
