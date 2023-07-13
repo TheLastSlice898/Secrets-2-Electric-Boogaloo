@@ -8,7 +8,16 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
 
     public string SceneName;
-    public
+    public static bool UnlockedCatch;
+    public static bool UnlockedRepair;
+    public static bool UnlockedPuzzle;
+    public static bool UnlockedTreeTops;
+    public static bool UnlockedPursuit;
+    public static bool UnlockedPotion;
+    public static bool UnlockedLockPicking;
+    public static bool UnlockedBoss;
+
+
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -38,5 +47,10 @@ public class GameManager : MonoBehaviour
     public void LoadRun()
     {
         SceneManager.LoadScene("Temple_Run", LoadSceneMode.Single);
+    }
+
+    public void LoadLevels()
+    {
+        SceneManager.LoadScene("Levels", LoadSceneMode.Additive);
     }
 }
