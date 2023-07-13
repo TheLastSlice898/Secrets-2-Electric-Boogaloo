@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 public class Lock : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -62,8 +64,9 @@ public class Lock : MonoBehaviour
     {
         if(CardTotal == 6) 
         {
-            Debug.Log("op");
-            timer.GetComponent<Timer>().timerOn = false; 
+            //Debug.Log("op");
+            timer.GetComponent<Timer>().timerOn = false;
+            SceneManager.LoadScene("Choose_Ingredient(Bella)");
         }
     }
 
