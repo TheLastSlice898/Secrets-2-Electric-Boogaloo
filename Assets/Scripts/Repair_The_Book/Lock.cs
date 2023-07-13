@@ -7,7 +7,8 @@ public class Lock : MonoBehaviour
     // Start is called before the first frame update
     public GameObject CardRight;
     public GameObject CardLeft;
-
+    public GameObject timer; 
+    public int CardTotal = 0; 
     void OnDestroy()
     {
         //Debug.Log("Bye");
@@ -24,8 +25,6 @@ public class Lock : MonoBehaviour
 
     }
 
-
-
     //On trigger enter means when the colliders then it will do something 
     // that something is if the gameobject is tagged as "LEFT" or "RIGHT" then it will destrig the dragged object, and toggle the hidden static page
     // the static page acts like a "drag and lock", so player are unable to move it once placed 
@@ -33,28 +32,41 @@ public class Lock : MonoBehaviour
     {
 
         //Debug.Log("aaaaaaaaaa");
-        if (other.gameObject.tag == "Left")
+        if (other.gameObject.CompareTag("Left"))
         {
             Debug.Log("Im the left");
-            other.gameObject.SetActive(false);
+            Destroy(other.gameObject);
             ToggleLeft();
+            CountCard();
         }
-        if (other.gameObject.tag == "Right")
+        if (other.gameObject.CompareTag("Right"))
         {
             Debug.Log("Im the right");
-            other.gameObject.SetActive(false);
+            Destroy(other.gameObject);
             ToggleRight();
+            CountCard(); 
         }
+
+
+        
     }
+
+    public void CountCard () 
+    { 
+        CardTotal = CardTotal + 1;
+    
+    }
+
     // Update is called once per frame
     void Update()
     {
-
+        if(CardTotal == 6) 
+        {
+            Debug.Log("op");
+            timer.GetComponent<Timer>().timerOn = false; 
+        }
     }
-  
 
 
-        //check what side
-        //toggle on card on side
-    }
+  }
 
