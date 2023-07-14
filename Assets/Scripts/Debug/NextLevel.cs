@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Test : MonoBehaviour
+public class NextLevel : MonoBehaviour
 {
     // Start is called before the first frame update
-    public void Debug()
+    public void Next()
     {
-        GameManager.UnlockedCatch = true;
+        GameManage.GameManager.NextScene();
     }
 }

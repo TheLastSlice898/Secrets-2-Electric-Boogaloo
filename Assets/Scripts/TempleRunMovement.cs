@@ -15,7 +15,7 @@ public class TempleRunMovement : MonoBehaviour
 
     public bool MoveLeft;
     public bool MoveRight;
-    public GameManager GameManager;
+    public GameManage GameManager;
     public bool HitWall;
     public float DistanceThreshhold;
     public float PlayerInput;
