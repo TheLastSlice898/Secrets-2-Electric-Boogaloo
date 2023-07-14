@@ -72,6 +72,8 @@ public class PotionMakerScript : MonoBehaviour
 
         if (obj && obj.activeSelf)
         {
+           
+
             wrongClicks++;
             hpSlider.value = wrongClicks;
 
@@ -81,9 +83,13 @@ public class PotionMakerScript : MonoBehaviour
 
                 Debug.Log("Nuh you can't game over");
             }
-            if (obj)
+            else
             {
-                Destroy(obj);
+                //Deactivate it and wait for the spawnDelay to reactivate it
+
+                obj.SetActive(false);
+                yield return new WaitForSeconds(spawnDelay);
+                obj.SetActive(true);
             }
         }
     }
