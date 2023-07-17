@@ -213,7 +213,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 198764033}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22, y: 6, z: 0.4}
+  m_LocalPosition: {x: 24, y: 6, z: 0.4}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -322,7 +322,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216548480}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 6, z: -12}
+  m_LocalPosition: {x: -1, y: 6, z: -14}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -464,6 +464,9 @@ MonoBehaviour:
   PlayerHealth: 0
   timeBox: {fileID: 1173972926}
   TimeRemaining: 0
+  SpawnPosition: 0
+  CanSpawn: 0
+  currentSpawnTimeIndex: 0
 --- !u!1 &552922022
 GameObject:
   m_ObjectHideFlags: 0
