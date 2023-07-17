@@ -27,7 +27,7 @@ public class CatchTheBook : MonoBehaviour
         
         BookOnLeft = true; 
         BookOnRight = false; 
-        transform.position = new Vector3(-5.67f, 0.87f, -8.72f); 
+        transform.position = new Vector3(-5.5f, 0.87f, -7.2f); 
 
         secondCounter = 0.0f;
         BookIsFlying = false; 
@@ -93,7 +93,7 @@ public class CatchTheBook : MonoBehaviour
         //Debug.Log("Amogus");
         BookOnRight = true; 
         BookOnLeft = false;
-        transform.position = new Vector3(-5.67f, 0.87f, 8.72f);
+        transform.position = new Vector3(-5.5f, 0.87f, 7.2f);
     }
 
     public void MoveBookLeft()
@@ -101,6 +101,6 @@ public class CatchTheBook : MonoBehaviour
         //Debug.Log("Sussy");
         BookOnRight = false; 
         BookOnLeft = true; 
-        transform.position = new Vector3(-5.67f, 0.87f, -8.72f); 
+        transform.position = new Vector3(-5.5f, 0.87f, -7.2f); 
     }
 }
