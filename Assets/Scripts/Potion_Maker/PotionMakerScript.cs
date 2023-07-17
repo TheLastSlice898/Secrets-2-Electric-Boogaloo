@@ -15,6 +15,7 @@ public class PotionMakerScript : MonoBehaviour
     public Slider hpSlider;                                                                                                         //Reference to the hp slider component
     public float spawnDelay = 1f;                                                                                                   //Delay between each spawn
     public float clickTimeout = 3f;                                                                                                 //Time allowed to click an object
+    public float deactivateDuration = 1f;                                                                                           //Delay after deactivation
     public Vector3 ingredientScale = new Vector3(2f, 2f, 2f);                                                                       //Adjust the scale values as per your requirement
     
 
@@ -45,15 +46,11 @@ public class PotionMakerScript : MonoBehaviour
 
                 spawnedIngredient.transform.localScale = ingredientScale;                                                               //Set the scale of the object
 
-                //if (ingredient.CompareTag("Correct_Ingredient"))
-                //{
+                
                 StartCoroutine(OnMouseDown());                                                                                      //Start OnMouseDown coroutine
 
-                //}
-                //else if (ingredient.CompareTag("Incorrect_Ingredient"))
-                //{
                 StartCoroutine(TimeoutObject(spawnedIngredient));                                                                   //Start the timeout coroutine for incorrect ingredients, passing the spawned ingredient as an argument
-                                                                                                                                    //}
+                                                                                                                                   
 
                 yield return new WaitForSeconds(spawnDelay);                                                                            //Wait for a delay before spawning the next ingredient
             }
@@ -95,8 +92,10 @@ public class PotionMakerScript : MonoBehaviour
         return randomPosition;                                                                                                      //Return the random position within the area
     }
 
+
     private void Update()
     {
+        
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -120,20 +119,32 @@ public class PotionMakerScript : MonoBehaviour
                 else if (hitObject.CompareTag("Incorrect_Ingredient"))
                 {
                     wrongClicks++;
+                    
 
                     if (wrongClicks > maxWrongClicks)
                     {
                         SceneManager.LoadScene(gameOverSceneName);                                                                  //Load the game over scene if maximum wrong clicks reached
                     }
 
-                    hitObject.SetActive(false);                                                                                     //Deactivate the incorrect ingredient object instead of destroying it
-                }
+                    StartCoroutine(DeactivateAndReactivate(hitObject));                                                             //Start the Coroutine to deactivate and reactivate the object
 
+                }
+                                
                 hpSlider.value = wrongClicks;                                                                                       //Update the slider value based on the number of wrong clicks
+                
             }
         }
     }
 
+    private IEnumerator DeactivateAndReactivate(GameObject obj)
+    {
+        obj.SetActive(false);
+
+        yield return new WaitForSeconds(deactivateDuration);
+
+        obj.SetActive(true);
+
+    }
     private void ShuffleList<T>(List<T> list)
     {
         int n = list.Count;                                                                                                         //Get the total number of elements in the list
@@ -154,22 +165,21 @@ public class PotionMakerScript : MonoBehaviour
 
     public IEnumerator OnMouseDown()
     {
-        if (gameObject.CompareTag("Correct_Ingredient"))
-        {
-            if (!canAppearAgain)
+            if (gameObject.CompareTag("Correct_Ingredient"))
             {
-                gameObject.SetActive(false);                                                                                        //Deactivate the game object if it has the tag "Correct_Ingredient" and should not appear again
+                if (!canAppearAgain)
+                {
+                    gameObject.SetActive(false);                                                                                        //Deactivate the game object if it has the tag "Correct_Ingredient" and should not appear again
+                }
+                else
+                {
+                    canAppearAgain = true;                                                                                              //Set the canAppearAgain flag to true if the game object can appear again
+                }
             }
-            else
-            {
-                canAppearAgain = true;                                                                                              //Set the canAppearAgain flag to true if the game object can appear again
-            }
-        }
-        else if (gameObject.CompareTag("Incorrect_Ingredient"))
-        {
-            canAppearAgain = true;                                                                                                  //Set the canAppearAgain flag to true if the game object has the tag "Incorrect_Ingredient" and can continue to appear
-        }
 
+            
+           
         yield return new WaitForSeconds(clickTimeout);                                                                              // Wait for the specified timeout duration
+
     }
 }

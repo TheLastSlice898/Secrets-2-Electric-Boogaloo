@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8404209283513652086}
   m_Layer: 0
   m_Name: Slime
-  m_TagString: Untagged
+  m_TagString: Incorrect_Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
