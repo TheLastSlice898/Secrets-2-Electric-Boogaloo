@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Left
   - Right
+<<<<<<< HEAD
+=======
   - Left_Drop
   - Right_Drop
   - Incorrect_Ingredient
@@ -13,6 +15,7 @@ TagManager:
   - Book
   - Shield
   - BossProjectile
+>>>>>>> main
   layers:
   - Default
   - TransparentFX

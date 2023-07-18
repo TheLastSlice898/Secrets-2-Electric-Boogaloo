@@ -23,7 +23,6 @@ public class Timer : MonoBehaviour
             if(timeLeft > 0)
             {
                 timeLeft -= Time.deltaTime;
-                updateTime(timeLeft);
             }
             else
             {
@@ -34,11 +33,6 @@ public class Timer : MonoBehaviour
 
             }
         }
-    }
-  private void updateTime(float currentTime)
-    {
-        float minute = Mathf.FloorToInt(currentTime / 60);
-        float second = Mathf.FloorToInt(currentTime % 60);
     }
 
 
