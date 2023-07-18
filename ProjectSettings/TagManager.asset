@@ -3,19 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Left
-  - Right
-<<<<<<< HEAD
-=======
-  - Left_Drop
-  - Right_Drop
-  - Incorrect_Ingredient
-  - Correct_Ingredient
-  - Book
-  - Shield
-  - BossProjectile
->>>>>>> main
+  tags: []
   layers:
   - Default
   - TransparentFX
