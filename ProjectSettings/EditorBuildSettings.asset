@@ -4,37 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-<<<<<<< HEAD
-    path: Assets/Scenes/Repair_The_Book(Bella).unity
-    guid: 99e9350cb8af3914a9c9b4ef10fd6fd2
-  - enabled: 1
-    path: Assets/Scenes/Choose_Ingredient(Bella).unity
-    guid: caec09c16fa5ba24ebb04724c3a22008
-=======
-    path: Assets/Scenes/Menu.unity
-    guid: 5612d1e218bb65b4ab36fbc4456f0e0c
-  - enabled: 1
-    path: Assets/Scenes/Credits.unity
-    guid: e5f374b964522cb45ae7b3f6c4fa3575
-  - enabled: 1
-    path: Assets/Scenes/Temple_Run.unity
-    guid: bdaab24d56d3cad4bb732a3b894951d0
-  - enabled: 1
-    path: Assets/Scenes/Catch_The_Book.unity
-    guid: 1a3867516e8067c449b8db98f4089375
-  - enabled: 1
-    path: Assets/Scenes/FinalBoss.unity
-    guid: 088fc12831cc7854fb4822541dba93a8
-  - enabled: 1
-    path: Assets/Scenes/Platformer.unity
-    guid: 36d6c7c7b46d1a447bad619c6534f3ad
-  - enabled: 1
-    path: Assets/Scenes/Potion_Maker.unity
-    guid: 1c6deed62f295624690eb6d205149c5c
-  - enabled: 1
-    path: Assets/Scenes/Repair_The_Book(Bella).unity
-    guid: 99e9350cb8af3914a9c9b4ef10fd6fd2
->>>>>>> main
+  m_Scenes: []
   m_configObjects: {}
