@@ -18,11 +18,16 @@ public class WaypointDisplay : MonoBehaviour
     }
     private void OnDrawGizmos()
     {
-        
+
         foreach (Transform Waypoint in transform)
         {
             Gizmos.color = Colour[1];
             Gizmos.DrawWireSphere(Waypoint.position, 0.5f);
+
+            if (Waypoint.gameObject.GetComponent<ForkScript>() != null)
+            {
+                Gizmos.DrawWireCube(Waypoint.position + Vector3.up, new Vector3(0.5f, 0.5f, 0.5f));
+            }
         }
 
         Gizmos.color = Colour[0];
@@ -30,7 +35,5 @@ public class WaypointDisplay : MonoBehaviour
         {
             Gizmos.DrawLine(transform.GetChild(i).position, transform.GetChild(i + 1).position);
         }
-
-        
     }
 }

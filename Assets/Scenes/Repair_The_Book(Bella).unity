@@ -839,8 +839,13 @@ GameObject:
   - component: {fileID: 856452276}
   - component: {fileID: 856452275}
   m_Layer: 0
+<<<<<<< HEAD
   m_Name: EventSystem
   m_TagString: Untagged
+=======
+  m_Name: Plane
+  m_TagString: Left_Drop
+>>>>>>> main
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -10,7 +10,7 @@ public class CatchTheBook : MonoBehaviour
     int bookHealth; 
 
     public float secondCounter; 
-    public float FlyTime; 
+    public int FlyTime; 
     public bool BookIsFlying;
 
     public bool BookOnLeft;
@@ -27,7 +27,7 @@ public class CatchTheBook : MonoBehaviour
         
         BookOnLeft = true; 
         BookOnRight = false; 
-        transform.position = new Vector3(-5.67f, 0.87f, -7.72f); 
+        transform.position = new Vector3(-5.5f, 0.87f, -7.2f); 
 
         secondCounter = 0.0f;
         BookIsFlying = false; 
@@ -57,7 +57,7 @@ public class CatchTheBook : MonoBehaviour
             healthBox.text = "Book HP: " + bookHealth; 
              
             secondCounter = 0f; 
-            FlyTime = 100f; 
+            //FlyTime = 100; 
 
             if(BookOnLeft == true) { 
                 MoveBookRight();
@@ -71,11 +71,11 @@ public class CatchTheBook : MonoBehaviour
         }
 
         if(BookIsFlying == true && BookOnLeft == true) {
-            transform.position += new Vector3(0,0,20) * Time.deltaTime;
+            transform.position += new Vector3(0,0,30) * Time.deltaTime;
         }
 
         if(BookIsFlying == true && BookOnRight == true) {
-            transform.position += new Vector3(0,0,-20) * Time.deltaTime;
+            transform.position += new Vector3(0,0,-30) * Time.deltaTime;
         }
 
         if(loseTimer <= 0f) {
@@ -85,7 +85,7 @@ public class CatchTheBook : MonoBehaviour
 
     public void RandomiseFlyTime()
     {
-        FlyTime = Random.Range(1,10); 
+        FlyTime = Random.Range(1,6); 
     }
 
     public void MoveBookRight()
@@ -93,7 +93,7 @@ public class CatchTheBook : MonoBehaviour
         //Debug.Log("Amogus");
         BookOnRight = true; 
         BookOnLeft = false;
-        transform.position = new Vector3(-5.67f, 0.87f, 7.72f);
+        transform.position = new Vector3(-5.5f, 0.87f, 7.2f);
     }
 
     public void MoveBookLeft()
@@ -101,6 +101,6 @@ public class CatchTheBook : MonoBehaviour
         //Debug.Log("Sussy");
         BookOnRight = false; 
         BookOnLeft = true; 
-        transform.position = new Vector3(-5.67f, 0.87f, -7.72f); 
+        transform.position = new Vector3(-5.5f, 0.87f, -7.2f); 
     }
 }
