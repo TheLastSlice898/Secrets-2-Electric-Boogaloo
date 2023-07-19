@@ -25,6 +25,7 @@ public class Press : MonoBehaviour
 
     public void OnMouseUp() 
     {
+        Debug.Log("Lose");
         SceneManager.LoadScene("Button_Game");
     }
 
