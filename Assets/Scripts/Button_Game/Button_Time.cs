@@ -4,32 +4,32 @@ using UnityEngine;
 using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
 
-public class Timer : MonoBehaviour
+public class Button_Time : MonoBehaviour
 {
     internal static float deltaTime;
-    public bool timerOn;
-    public float timeLeft; 
+    public bool timeOn;
+    public float timeThatsLeft;
     // Start is called before the first frame update
     void Start()
     {
-        timerOn = true; 
+        timeOn = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(timerOn)
+        if (timeOn)
         {
-            if(timeLeft > 0)
+            if (timeThatsLeft > 0)
             {
-                timeLeft -= Time.deltaTime;
+                timeThatsLeft -= Time.deltaTime;
             }
             else
             {
-                //Debug.Log("you lose");
-                timeLeft = 0;
-                timerOn = false;
-                
+                Debug.Log("you lose");
+                timeThatsLeft = 0;
+                timeOn = false;
+                SceneManager.LoadScene("Button_Game");
 
             }
         }
