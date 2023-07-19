@@ -29,7 +29,6 @@ public class Timer : MonoBehaviour
                 //Debug.Log("you lose");
                 timeLeft = 0;
                 timerOn = false;
-                
 
             }
         }
