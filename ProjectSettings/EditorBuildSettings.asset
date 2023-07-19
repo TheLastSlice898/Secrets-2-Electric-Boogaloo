@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Repair_The_Book(Bella).unity
+    guid: 99e9350cb8af3914a9c9b4ef10fd6fd2
+  - enabled: 1
+    path: Assets/Scenes/Button_Game.unity
+    guid: caec09c16fa5ba24ebb04724c3a22008
   m_configObjects: {}

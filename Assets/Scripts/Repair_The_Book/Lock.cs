@@ -66,7 +66,7 @@ public class Lock : MonoBehaviour
         {
             //Debug.Log("op");
             timer.GetComponent<Timer>().timerOn = false;
-            SceneManager.LoadScene("Button_Game");
+            
         }
     }
 
