@@ -62,6 +62,11 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
+        if(PlayerHealth <= 0) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
+        }
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "BossProjectile") 

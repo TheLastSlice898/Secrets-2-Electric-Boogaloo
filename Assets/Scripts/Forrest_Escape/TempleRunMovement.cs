@@ -15,11 +15,12 @@ public class TempleRunMovement : MonoBehaviour
 
     public bool MoveLeft;
     public bool MoveRight;
-    public GameManage GameManager;
     public bool HitWall;
     public float DistanceThreshhold;
     public float PlayerInput;
 
+    public float timehold;
+    public float TimeMulti = 1f;
     [SerializeField] private bool Death;
     // Start is called before the first frame update
     void Start()
@@ -66,7 +67,9 @@ public class TempleRunMovement : MonoBehaviour
             MoveLeft = false;
         }
 
-        transform.position = Vector3.MoveTowards(transform.position, currentWaypoint.position, MoveSpeed * Time.deltaTime);
+
+        
+        transform.position = Vector3.MoveTowards(transform.position, currentWaypoint.position, ((MoveSpeed * TimeMulti) * Time.deltaTime));
 
 
         if (Vector3.Distance(transform.position, currentWaypoint.position) < DistanceThreshhold)
@@ -159,7 +162,7 @@ public class TempleRunMovement : MonoBehaviour
 
     public void DeathScript()
     {
-        SceneManager.LoadScene(GameManager.SceneName);
+        GameManage.GameManager.ResetScene();
     }
     public void PlayerFirstIndex()
     {

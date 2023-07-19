@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Death : MonoBehaviour
 {
-    public bool Deathbool;
+    private bool Deathbool = true;
 
     // Start is called before the first frame update
     void Start()

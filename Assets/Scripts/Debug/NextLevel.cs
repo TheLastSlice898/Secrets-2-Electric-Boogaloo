@@ -5,8 +5,14 @@ using UnityEngine;
 public class NextLevel : MonoBehaviour
 {
     // Start is called before the first frame update
-    public void Next()
+    public void Update()
     {
-        GameManage.GameManager.NextScene();
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            GameManage.GameManager.NextScene();
+        }
+        
+
+
     }
 }
