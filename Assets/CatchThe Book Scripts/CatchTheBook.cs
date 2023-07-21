@@ -79,7 +79,12 @@ public class CatchTheBook : MonoBehaviour
         }
 
         if(loseTimer <= 0f) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
+            GameManage.GameManager.ResetScene(); 
+        }
+
+        if(bookHealth == 0)
+        {
+            GameManage.GameManager.NextScene();
         }
     }
 

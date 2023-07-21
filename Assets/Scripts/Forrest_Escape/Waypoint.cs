@@ -6,6 +6,7 @@ public class Waypoint : MonoBehaviour
 {
     public Transform Waypoints;
     public bool PlayerDies;
+    public bool PlayerWins;
     // Start is called before the first frame update
     void Start()
 
@@ -38,7 +39,13 @@ public class Waypoint : MonoBehaviour
             {
                 PlayerDies = currentWaypoint.transform.GetComponent<Death>().DeathReturn();
             }
-            Debug.Log("i win :)");
+            
+            if (currentWaypoint.transform.GetComponent<WinPoint>() != null)
+            {
+                PlayerWins = currentWaypoint.transform.GetComponent<WinPoint>().WinReturn();
+                GameManage.GameManager.NextScene();
+            }
+
             return currentWaypoint.transform;
         }
 
