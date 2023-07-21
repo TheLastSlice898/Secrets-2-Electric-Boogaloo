@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Test : MonoBehaviour
+public class DeathSpike : MonoBehaviour
 {
     // Start is called before the first frame update
-    public void Debug()
+    public void OnTriggerEnter(Collider other)
     {
-        GameManager.UnlockedCatch = true;
+        GameManage.GameManager.ResetScene();
     }
 }

@@ -349,8 +349,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Levels
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4a2dfc9e9fedee3499c61e325b1cdc84, type: 2}
+  m_sharedMaterial: {fileID: 352428318318798887, guid: 4a2dfc9e9fedee3499c61e325b1cdc84, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -374,7 +374,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 70.5
   m_fontSizeBase: 26.48
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -761,6 +761,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1206187095}
+        m_TargetAssemblyTypeName: GameManage, Assembly-CSharp
+        m_MethodName: CheckLevels
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &810878861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -884,8 +896,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1206187095}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: LoadRun
+        m_TargetAssemblyTypeName: GameManage, Assembly-CSharp
+        m_MethodName: StartScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1013,7 +1025,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &948101892
 RectTransform:
@@ -1146,6 +1158,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: 
+  SceneInt: 0
+  UnlockedCatch: 0
+  UnlockedRepair: 0
+  UnlockedPuzzle: 0
+  UnlockedTreeTops: 0
+  UnlockedPursuit: 0
+  UnlockedPotion: 0
+  UnlockedLockPicking: 0
+  UnlockedBoss: 0
 --- !u!4 &1206187096
 Transform:
   m_ObjectHideFlags: 0
@@ -1221,8 +1242,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: End
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4a2dfc9e9fedee3499c61e325b1cdc84, type: 2}
+  m_sharedMaterial: {fileID: 352428318318798887, guid: 4a2dfc9e9fedee3499c61e325b1cdc84, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1246,7 +1267,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 70.5
   m_fontSizeBase: 26.48
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1356,8 +1377,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Credits
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4a2dfc9e9fedee3499c61e325b1cdc84, type: 2}
+  m_sharedMaterial: {fileID: 352428318318798887, guid: 4a2dfc9e9fedee3499c61e325b1cdc84, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1381,7 +1402,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 70.5
   m_fontSizeBase: 26.48
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1665,8 +1686,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Start
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4a2dfc9e9fedee3499c61e325b1cdc84, type: 2}
+  m_sharedMaterial: {fileID: 352428318318798887, guid: 4a2dfc9e9fedee3499c61e325b1cdc84, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1690,7 +1711,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 70.5
   m_fontSizeBase: 26.48
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1947,7 +1968,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1816644050}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 745.6666, y: 366.33334, z: 0}
+  m_LocalPosition: {x: 745.6666, y: 366.33334, z: -836}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
