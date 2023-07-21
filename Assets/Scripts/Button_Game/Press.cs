@@ -12,10 +12,12 @@ public class Press : MonoBehaviour
 
     public GameObject button;
     public GameObject time;
-    public GameObject PopUp_Please;
-    public GameObject PopUp_Ford_Fiesta;
-    public GameObject PopUp_Come_On;
     public GameObject PopUp_Do_It;
+    public GameObject PopUp_Come_On;
+    public GameObject PopUp_Ford_Fiesta;
+    public GameObject PopUp_Please;
+
+
 
     private bool isPressed;
 
@@ -35,27 +37,39 @@ public class Press : MonoBehaviour
     void Start()
     {
         isPressed = false;
-
-        if (timer.timeLeft > 15)
-        {
-            togglePopUp1();
-        }
-        else if (timer.timeLeft == 12)
-       {
-            togglePopUp2();
-       }
-
-        else if (timer.timeLeft == 7) 
-        { 
-            togglePopUp3();
-        }
-
-        else if(timer.timeLeft == 2)
-        {
-            togglePopUp4();
-        }
+        StartCoroutine(PopUpActivate()); 
+      
        
     }
+
+    //thanks to scott for this one :3
+    IEnumerator PopUpActivate()
+    {
+        //Debug.Log("mmmm started at 3 " + Time.time);
+        // tells the code to wait for x amount 
+        yield return new WaitForSeconds(3); 
+
+        //then starts function
+        togglePopUp1();
+
+        yield return new WaitForSeconds(5);
+
+        togglePopUp2(); 
+
+        yield return new WaitForSeconds(5);
+
+        togglePopUp3();
+
+        yield return new WaitForSeconds(5);
+
+        togglePopUp4();
+        
+        
+    }
+
+
+
+
 
     void togglePopUp1()
 
@@ -74,7 +88,7 @@ public class Press : MonoBehaviour
     {
         PopUp_Ford_Fiesta.SetActive(true);
     }
-
+    
     void togglePopUp4()
 
     {
@@ -88,7 +102,7 @@ public class Press : MonoBehaviour
 
     public void OnMouseUp() 
     {
-        Debug.Log("Lose");
+        Debug.Log("You Lose");
         SceneManager.LoadScene("Button_Game");
     }
 
@@ -98,4 +112,3 @@ public class Press : MonoBehaviour
 
 //Thank you and credits to Dani Krossing on Youtube for the tutorial on  "timer = GameObject.Find("Button_Base/Timer").GetComponent<Timer>();"
 //https://www.youtube.com/watch?v=Y7pp2gzCzUI&ab_channel=DaniKrossing
-
