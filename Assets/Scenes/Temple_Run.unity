@@ -437,7 +437,7 @@ GameObject:
   - component: {fileID: 53652598}
   - component: {fileID: 53652597}
   m_Layer: 0
-  m_Name: Fork
+  m_Name: Frk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -475,8 +475,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colour:
-  - {r: 1, g: 0.8950032, b: 0, a: 0.9098039}
-  - {r: 0, g: 0.4764049, b: 1, a: 0.9843137}
+  - {r: 0.9333334, g: 0.9843138, b: 0.298, a: 0.9647059}
+  - {r: 0, g: 0, b: 1, a: 1}
   Death: {fileID: -5754084199372789682, guid: 2c9f3740fb4c70c49b5d96d78afb5fbc, type: 3}
   Win: {fileID: -5754084199372789682, guid: 62189ec682a291f4bb603a3cecbde81c, type: 3}
 --- !u!114 &53652598
@@ -545,8 +545,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colour:
-  - {r: 1, g: 0.8950032, b: 0, a: 0.9098039}
-  - {r: 0, g: 0.4764049, b: 1, a: 0.9843137}
+  - {r: 0, g: 0.9647059, b: 0.881657, a: 1}
+  - {r: 0.6304735, g: 0.8301887, b: 0.8226023, a: 1}
   Death: {fileID: -5754084199372789682, guid: 2c9f3740fb4c70c49b5d96d78afb5fbc, type: 3}
   Win: {fileID: -5754084199372789682, guid: 62189ec682a291f4bb603a3cecbde81c, type: 3}
 --- !u!114 &69237718
@@ -1280,8 +1280,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colour:
-  - {r: 1, g: 0.8950032, b: 0, a: 0.9098039}
-  - {r: 0, g: 0.4764049, b: 1, a: 0.9843137}
+  - {r: 0.16290054, g: 0.8584906, b: 0.125534, a: 1}
+  - {r: 0.0048110485, g: 1, b: 0, a: 1}
   Death: {fileID: -5754084199372789682, guid: 2c9f3740fb4c70c49b5d96d78afb5fbc, type: 3}
   Win: {fileID: -5754084199372789682, guid: 62189ec682a291f4bb603a3cecbde81c, type: 3}
 --- !u!4 &368414784 stripped
@@ -1337,7 +1337,7 @@ MonoBehaviour:
   DistanceThreshhold: 0.1
   PlayerInput: 0
   timehold: 0
-  TimeMulti: 1
+  TimeMulti: 1.5
   Death: 0
 --- !u!4 &403075943
 Transform:
@@ -1514,8 +1514,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colour:
-  - {r: 1, g: 0.8950032, b: 0, a: 0.9098039}
-  - {r: 0, g: 0.4764049, b: 1, a: 0.9843137}
+  - {r: 0.6415094, g: 0.47670472, b: 0.105909556, a: 1}
+  - {r: 0.21043777, g: 0, b: 0.8301887, a: 1}
   Death: {fileID: -5754084199372789682, guid: 2c9f3740fb4c70c49b5d96d78afb5fbc, type: 3}
   Win: {fileID: -5754084199372789682, guid: 62189ec682a291f4bb603a3cecbde81c, type: 3}
 --- !u!114 &436229573
@@ -1917,8 +1917,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colour:
-  - {r: 1, g: 0.8950032, b: 0, a: 0.9098039}
-  - {r: 0, g: 0.4764049, b: 1, a: 0.9843137}
+  - {r: 0.6415094, g: 0.47670472, b: 0.105909556, a: 1}
+  - {r: 0.21043777, g: 0, b: 0.8301887, a: 1}
   Death: {fileID: -5754084199372789682, guid: 2c9f3740fb4c70c49b5d96d78afb5fbc, type: 3}
   Win: {fileID: -5754084199372789682, guid: 62189ec682a291f4bb603a3cecbde81c, type: 3}
 --- !u!114 &535443300
@@ -2134,8 +2134,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colour:
-  - {r: 1, g: 0.8950032, b: 0, a: 0.9098039}
-  - {r: 0, g: 0.4764049, b: 1, a: 0.9843137}
+  - {r: 0.6415094, g: 0.47670472, b: 0.105909556, a: 1}
+  - {r: 0.8148947, g: 0.83137256, b: 0, a: 1}
   Death: {fileID: -5754084199372789682, guid: 2c9f3740fb4c70c49b5d96d78afb5fbc, type: 3}
   Win: {fileID: -5754084199372789682, guid: 62189ec682a291f4bb603a3cecbde81c, type: 3}
 --- !u!114 &561317365
@@ -2411,8 +2411,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colour:
-  - {r: 1, g: 0.8950032, b: 0, a: 0.9098039}
-  - {r: 0, g: 0.4764049, b: 1, a: 0.9843137}
+  - {r: 0.6415094, g: 0.47670472, b: 0.105909556, a: 1}
+  - {r: 0.8148947, g: 0.83137256, b: 0, a: 1}
   Death: {fileID: -5754084199372789682, guid: 2c9f3740fb4c70c49b5d96d78afb5fbc, type: 3}
   Win: {fileID: -5754084199372789682, guid: 62189ec682a291f4bb603a3cecbde81c, type: 3}
 --- !u!114 &602048197
@@ -2633,7 +2633,7 @@ GameObject:
   - component: {fileID: 636247866}
   - component: {fileID: 636247865}
   m_Layer: 0
-  m_Name: ForkR
+  m_Name: FrkR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2672,8 +2672,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colour:
-  - {r: 1, g: 0.8950032, b: 0, a: 0.9098039}
-  - {r: 0, g: 0.4764049, b: 1, a: 0.9843137}
+  - {r: 0.9333334, g: 0.9843138, b: 0.298, a: 0.9647059}
+  - {r: 0, g: 0, b: 1, a: 1}
   Death: {fileID: -5754084199372789682, guid: 2c9f3740fb4c70c49b5d96d78afb5fbc, type: 3}
   Win: {fileID: -5754084199372789682, guid: 62189ec682a291f4bb603a3cecbde81c, type: 3}
 --- !u!114 &636247866
@@ -2935,8 +2935,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colour:
-  - {r: 1, g: 0.8950032, b: 0, a: 0.9098039}
-  - {r: 0, g: 0.4764049, b: 1, a: 0.9843137}
+  - {r: 0.6415094, g: 0.47670472, b: 0.105909556, a: 1}
+  - {r: 0.8148947, g: 0.83137256, b: 0, a: 1}
   Death: {fileID: -5754084199372789682, guid: 2c9f3740fb4c70c49b5d96d78afb5fbc, type: 3}
   Win: {fileID: -5754084199372789682, guid: 62189ec682a291f4bb603a3cecbde81c, type: 3}
 --- !u!114 &710799940
@@ -3195,7 +3195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca364b5b3a9723448a0985fe14396ebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Waypoints: {fileID: 0}
+  Waypoints: {fileID: 1702818201}
   PlayerDies: 0
   PlayerWins: 0
 --- !u!4 &808643274
@@ -3296,8 +3296,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colour:
-  - {r: 1, g: 0.8950032, b: 0, a: 0.9098039}
-  - {r: 0, g: 0.4764049, b: 1, a: 0.9843137}
+  - {r: 0.6415094, g: 0.47670472, b: 0.105909556, a: 1}
+  - {r: 0.8148947, g: 0.83137256, b: 0, a: 1}
   Death: {fileID: -5754084199372789682, guid: 2c9f3740fb4c70c49b5d96d78afb5fbc, type: 3}
   Win: {fileID: -5754084199372789682, guid: 62189ec682a291f4bb603a3cecbde81c, type: 3}
 --- !u!114 &840282838
@@ -3827,8 +3827,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colour:
-  - {r: 1, g: 0.8950032, b: 0, a: 0.9098039}
-  - {r: 0, g: 0.4764049, b: 1, a: 0.9843137}
+  - {r: 0.6415094, g: 0.47670472, b: 0.105909556, a: 1}
+  - {r: 0.8148947, g: 0.83137256, b: 0, a: 1}
   Death: {fileID: -5754084199372789682, guid: 2c9f3740fb4c70c49b5d96d78afb5fbc, type: 3}
   Win: {fileID: -5754084199372789682, guid: 62189ec682a291f4bb603a3cecbde81c, type: 3}
 --- !u!114 &1009787866
@@ -3888,7 +3888,7 @@ GameObject:
   - component: {fileID: 1052056190}
   - component: {fileID: 1052056189}
   m_Layer: 0
-  m_Name: Fork
+  m_Name: Frk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3926,8 +3926,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colour:
-  - {r: 1, g: 0.8950032, b: 0, a: 0.9098039}
-  - {r: 0, g: 0.4764049, b: 1, a: 0.9843137}
+  - {r: 0.9333334, g: 0.9843138, b: 0.298, a: 0.9647059}
+  - {r: 0, g: 0, b: 1, a: 1}
   Death: {fileID: -5754084199372789682, guid: 2c9f3740fb4c70c49b5d96d78afb5fbc, type: 3}
   Win: {fileID: -5754084199372789682, guid: 62189ec682a291f4bb603a3cecbde81c, type: 3}
 --- !u!114 &1052056190
@@ -4033,8 +4033,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colour:
-  - {r: 1, g: 0.8950032, b: 0, a: 0.9098039}
-  - {r: 0, g: 0.4764049, b: 1, a: 0.9843137}
+  - {r: 0.6415094, g: 0.47670472, b: 0.105909556, a: 1}
+  - {r: 0.21043777, g: 0, b: 0.8301887, a: 1}
   Death: {fileID: -5754084199372789682, guid: 2c9f3740fb4c70c49b5d96d78afb5fbc, type: 3}
   Win: {fileID: -5754084199372789682, guid: 62189ec682a291f4bb603a3cecbde81c, type: 3}
 --- !u!114 &1082686024
@@ -4101,8 +4101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colour:
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 1, g: 0.9803922, b: 0, a: 1}
+  - {r: 0, g: 0.73684216, b: 1, a: 1}
+  - {r: 0, g: 1, b: 0, a: 1}
   Death: {fileID: -5754084199372789682, guid: 2c9f3740fb4c70c49b5d96d78afb5fbc, type: 3}
   Win: {fileID: -5754084199372789682, guid: 62189ec682a291f4bb603a3cecbde81c, type: 3}
 --- !u!114 &1148415436
@@ -4131,7 +4131,7 @@ GameObject:
   - component: {fileID: 1151098296}
   - component: {fileID: 1151098295}
   m_Layer: 0
-  m_Name: Fork
+  m_Name: Frk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4171,8 +4171,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colour:
-  - {r: 1, g: 0.8950032, b: 0, a: 0.9098039}
-  - {r: 0, g: 0.4764049, b: 1, a: 0.9843137}
+  - {r: 0.9333334, g: 0.9843138, b: 0.298, a: 0.9647059}
+  - {r: 0, g: 0, b: 1, a: 1}
   Death: {fileID: -5754084199372789682, guid: 2c9f3740fb4c70c49b5d96d78afb5fbc, type: 3}
   Win: {fileID: -5754084199372789682, guid: 62189ec682a291f4bb603a3cecbde81c, type: 3}
 --- !u!114 &1151098296
@@ -4229,15 +4229,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156032213}
-  m_LocalRotation: {x: 0.00000008452274, y: -0.9989327, z: 0.046189606, w: 0.0000018202588}
-  m_LocalPosition: {x: 0.03, y: 3.49, z: 17.01}
+  m_LocalRotation: {x: 0.00000012479722, y: -0.9976654, z: 0.06829173, w: 0.0000018179417}
+  m_LocalPosition: {x: 0.03, y: 4.42, z: 6.9}
   m_LocalScale: {x: 1, y: 1.7434, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 540332811}
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 5.295, y: -180, z: 0}
+  m_LocalEulerAnglesHint: {x: 7.832, y: -180, z: 0}
 --- !u!1001 &1156908150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4451,8 +4451,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colour:
-  - {r: 1, g: 0.8950032, b: 0, a: 0.9098039}
-  - {r: 0, g: 0.4764049, b: 1, a: 0.9843137}
+  - {r: 0.6415094, g: 0.47670472, b: 0.105909556, a: 1}
+  - {r: 0.8148947, g: 0.83137256, b: 0, a: 1}
   Death: {fileID: -5754084199372789682, guid: 2c9f3740fb4c70c49b5d96d78afb5fbc, type: 3}
   Win: {fileID: -5754084199372789682, guid: 62189ec682a291f4bb603a3cecbde81c, type: 3}
 --- !u!114 &1168908979
@@ -5287,8 +5287,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colour:
-  - {r: 1, g: 0.8950032, b: 0, a: 0.9098039}
-  - {r: 0, g: 0.4764049, b: 1, a: 0.9843137}
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 1, g: 0, b: 0, a: 1}
   Death: {fileID: -5754084199372789682, guid: 2c9f3740fb4c70c49b5d96d78afb5fbc, type: 3}
   Win: {fileID: -5754084199372789682, guid: 62189ec682a291f4bb603a3cecbde81c, type: 3}
 --- !u!4 &1372494007 stripped
@@ -5644,8 +5644,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colour:
-  - {r: 1, g: 0.8950032, b: 0, a: 0.9098039}
-  - {r: 0, g: 0.4764049, b: 1, a: 0.9843137}
+  - {r: 0.16290054, g: 0.8584906, b: 0.125534, a: 1}
+  - {r: 0.0048110485, g: 1, b: 0, a: 1}
   Death: {fileID: -5754084199372789682, guid: 2c9f3740fb4c70c49b5d96d78afb5fbc, type: 3}
   Win: {fileID: -5754084199372789682, guid: 62189ec682a291f4bb603a3cecbde81c, type: 3}
 --- !u!1 &1451471255
@@ -5829,8 +5829,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colour:
-  - {r: 1, g: 0.8950032, b: 0, a: 0.9098039}
-  - {r: 0, g: 0.4764049, b: 1, a: 0.9843137}
+  - {r: 0, g: 0.9647059, b: 0.881657, a: 1}
+  - {r: 0.6304735, g: 0.8301887, b: 0.8226023, a: 1}
   Death: {fileID: -5754084199372789682, guid: 2c9f3740fb4c70c49b5d96d78afb5fbc, type: 3}
   Win: {fileID: -5754084199372789682, guid: 62189ec682a291f4bb603a3cecbde81c, type: 3}
 --- !u!114 &1492934663
@@ -6659,8 +6659,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colour:
-  - {r: 1, g: 0.8950032, b: 0, a: 0.9098039}
-  - {r: 0, g: 0.4764049, b: 1, a: 0.9843137}
+  - {r: 0, g: 0.9647059, b: 0.881657, a: 1}
+  - {r: 0.6304735, g: 0.8301887, b: 0.8226023, a: 1}
   Death: {fileID: -5754084199372789682, guid: 2c9f3740fb4c70c49b5d96d78afb5fbc, type: 3}
   Win: {fileID: -5754084199372789682, guid: 62189ec682a291f4bb603a3cecbde81c, type: 3}
 --- !u!114 &1681082350
@@ -6798,10 +6798,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colour:
-  - {r: 0, g: 0, b: 0, a: 1}
-  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0.14150944, g: 0.33229083, b: 0.5660378, a: 1}
+  - {r: 0, g: 0.7765158, b: 0.89411765, a: 1}
   Death: {fileID: -5754084199372789682, guid: 2c9f3740fb4c70c49b5d96d78afb5fbc, type: 3}
-  Win: {fileID: -5754084199372789682, guid: 62189ec682a291f4bb603a3cecbde81c, type: 3}
+  Win: {fileID: 0}
 --- !u!1001 &1710028667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7601,8 +7601,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colour:
-  - {r: 1, g: 0.8950032, b: 0, a: 0.9098039}
-  - {r: 0, g: 0.4764049, b: 1, a: 0.9843137}
+  - {r: 0.6415094, g: 0.47670472, b: 0.105909556, a: 1}
+  - {r: 0.8148947, g: 0.83137256, b: 0, a: 1}
   Death: {fileID: -5754084199372789682, guid: 2c9f3740fb4c70c49b5d96d78afb5fbc, type: 3}
   Win: {fileID: -5754084199372789682, guid: 62189ec682a291f4bb603a3cecbde81c, type: 3}
 --- !u!114 &1895257717
