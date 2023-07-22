@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[RequireComponent(typeof(Rigidbody))]
+
 public class Drag : MonoBehaviour
 {
     public delegate void DragEndedDelegate(Drag draggableObject);
@@ -34,7 +34,9 @@ public class Drag : MonoBehaviour
 
 }
 
-// thank you to curiousbits on youtube for the tutorial to build this script :) 
-// https://youtu.be/axW46wCJxZ0 
-
+// colider detedcts if child of book, parenr it, child, trandform
+// set up ontrigenter, parenting or making ibject child, simple transform 
+// teleportin, switch off 
+// dectetion how many are in book, how many for win 
+// small match area 
 

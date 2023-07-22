@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class TempleRunMovement : MonoBehaviour
 {
@@ -15,19 +14,16 @@ public class TempleRunMovement : MonoBehaviour
 
     public bool MoveLeft;
     public bool MoveRight;
+
     public bool HitWall;
     public float DistanceThreshhold;
     public float PlayerInput;
-
-    public float timehold;
-    public float TimeMulti = 1f;
-    [SerializeField] private bool Death;
     // Start is called before the first frame update
     void Start()
     {
         currentWaypoint = WaypointScript.GetNextWaypoint(currentWaypoint);
         transform.position = currentWaypoint.position;
-        
+
         currentWaypoint = WaypointScript.GetNextWaypoint(currentWaypoint);
     }
 
@@ -46,7 +42,6 @@ public class TempleRunMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         float PlayerInp = Input.GetAxis("Horizontal");
 
         PlayerInput = PlayerInp;
@@ -67,19 +62,12 @@ public class TempleRunMovement : MonoBehaviour
             MoveLeft = false;
         }
 
-
-        
-        transform.position = Vector3.MoveTowards(transform.position, currentWaypoint.position, ((MoveSpeed * TimeMulti) * Time.deltaTime));
+        transform.position = Vector3.MoveTowards(transform.position, currentWaypoint.position, MoveSpeed * Time.deltaTime);
 
 
         if (Vector3.Distance(transform.position, currentWaypoint.position) < DistanceThreshhold)
         {
-            
-            if(WaypointScript.PlayerDies == true)
-            {
-                DeathScript();
-            }
-            //Debug.Log(currentWaypoint.GetSiblingIndex());
+            Debug.Log(currentWaypoint.GetSiblingIndex());
             if (MoveRight)
             {
                 if (currentWaypoint.GetComponent<ForkScript>() == null)
@@ -89,8 +77,8 @@ public class TempleRunMovement : MonoBehaviour
 
                 if (currentWaypoint.GetComponent<ForkScript>().RightPath == true)
                 {
-                    Transform NewTransfrom = currentWaypoint.GetComponent<ForkScript>().TransReturn();
-                    WaypointScript.GetComponent<Waypoint>().Waypoints = NewTransfrom;
+                    int newPath = currentWaypoint.GetComponent<ForkScript>().PathReturn();
+                    WaypointScript.CurrentPath = newPath;
                     ResetIndex();
 
                     currentWaypoint = WaypointScript.GetNextWaypoint(currentWaypoint);
@@ -116,8 +104,8 @@ public class TempleRunMovement : MonoBehaviour
 
                 if (currentWaypoint.GetComponent<ForkScript>().LeftPath == true)
                 {
-                    Transform NewTransfrom = currentWaypoint.GetComponent<ForkScript>().TransReturn();
-                    WaypointScript.GetComponent<Waypoint>().Waypoints = NewTransfrom;
+                    int newPath = currentWaypoint.GetComponent<ForkScript>().PathReturn();
+                    WaypointScript.CurrentPath = newPath;
                     ResetIndex();
 
                     currentWaypoint = WaypointScript.GetNextWaypoint(currentWaypoint);
@@ -149,6 +137,7 @@ public class TempleRunMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.KeypadEnter))
         {
             ResetIndex();
+            WaypointScript.CurrentPath = 0;
         }
         if (HitWall == true)
         {
@@ -157,13 +146,9 @@ public class TempleRunMovement : MonoBehaviour
     }
     public void ResetIndex()
     {
-        currentWaypoint = WaypointScript.Waypoints.transform.GetChild(0);
+        currentWaypoint = WaypointScript.Waypoints[WaypointScript.CurrentPath].transform.GetChild(0);
     }
 
-    public void DeathScript()
-    {
-        GameManage.GameManager.ResetScene();
-    }
     public void PlayerFirstIndex()
     {
 

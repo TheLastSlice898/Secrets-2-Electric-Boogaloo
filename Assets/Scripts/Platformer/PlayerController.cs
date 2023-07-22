@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
-
-
 public class PlayerController : MonoBehaviour
 {
 
@@ -25,21 +23,28 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float MoveX = Input.GetAxis("Horizontal");
-        Debug.Log(MoveX);
-        PlayerRB.velocity = new Vector3(MoveX * playerForce,PlayerRB.velocity.y,PlayerRB.velocity.z);
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        Move();
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
         }
-    }
-        //Debug.Log(PlayerRB.velocity.magnitude);
+        Debug.Log(PlayerRB.velocity.x);
 //fuck off cam
-//yea fuck cam
-//<3 you cam
+     if(PlayerRB.velocity.x > MaxSpeed)
+     {
+        PlayerRB.velocity.Set(PlayerRB.velocity.x,PlayerRB.velocity.y,PlayerRB.velocity.z);
+     }
 
-    
-    //Debug.Log(PlayerRB.velocity);
+
+    }
+    void Move()
+    {
+
+            //make this a rb.addforce
+
+        float MoveX = Input.GetAxis("Horizontal");
+        PlayerRB.AddForce(new Vector3((MoveX * playerForce),0,0), ForceMode.Impulse);       
+    }
     void Jump()
     {
        if (HasJumped)
@@ -50,9 +55,8 @@ public class PlayerController : MonoBehaviour
        }
        else if (DoubleJump)
        {
-        PlayerRB.velocity.Set(0f,0f,0f);
-        PlayerRB.AddForce((Vector3.up * JumpHeight), ForceMode.Impulse);
-        DoubleJump = false;
+         PlayerRB.AddForce((Vector3.up * JumpHeight), ForceMode.Impulse);
+         DoubleJump = false;
        }
       
     }

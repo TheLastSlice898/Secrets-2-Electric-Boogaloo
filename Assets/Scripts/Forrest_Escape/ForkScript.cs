@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ForkScript : MonoBehaviour
 {
+    [SerializeField] private int NextPath;
 
     public bool LeftPath;
     public bool RightPath;
@@ -19,10 +20,9 @@ public class ForkScript : MonoBehaviour
 
     }
 
-    public Transform TransReturn()
+    public int PathReturn()
     {
-        //we did it bois, we returned trans people :3
-        return gameObject.transform;
+        return NextPath;
     }
 
 
