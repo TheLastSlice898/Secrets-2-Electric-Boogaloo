@@ -1524,6 +1524,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CardRight: {fileID: 1197374739}
   CardLeft: {fileID: 965676263}
+  timer: {fileID: 1464134200}
+  CardTotal: 0
 --- !u!1001 &1589840314
 PrefabInstance:
   m_ObjectHideFlags: 0

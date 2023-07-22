@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Exit : MonoBehaviour
+public class back : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -17,8 +17,8 @@ public class Exit : MonoBehaviour
 
     }
 
-    public void ExitScene()
+    public void Back()
     {
-        Application.Quit();
+        GameManage.GameManager.MainMenu();
     }
 }

@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.SceneManagement;
-using UnityEngine.SceneManagement;
 using System;
 
 public class Timer : MonoBehaviour
@@ -32,10 +30,10 @@ void Update()
             }
             else
             {
-                //Debug.Log("you lose");
+                
                 timeLeft = 0;
                 timerOn = false;
-
+                GameManage.GameManager.NextScene();
             }
         }
     }
