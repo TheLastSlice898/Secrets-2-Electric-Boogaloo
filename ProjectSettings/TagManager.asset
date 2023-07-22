@@ -13,6 +13,9 @@ TagManager:
   - Book
   - Shield
   - BossProjectile
+  - Spawn_Location
+  - MagicBlockade
+  - PileOfLogs
   layers:
   - Default
   - TransparentFX
