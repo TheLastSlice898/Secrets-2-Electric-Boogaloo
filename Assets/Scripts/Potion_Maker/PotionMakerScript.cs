@@ -111,7 +111,7 @@ public class PotionMakerScript : MonoBehaviour
 
                     if (clickedCorrectIngredients == correctIngredients.Length)
                     {
-                        SceneManager.LoadScene(winSceneName);                                                                       //Load the win scene if all correct ingredients have been clicked
+                        GameManage.GameManager.NextScene();                                                                    //Load the win scene if all correct ingredients have been clicked
                     }
 
                     Destroy(hitObject);
@@ -123,7 +123,7 @@ public class PotionMakerScript : MonoBehaviour
 
                     if (wrongClicks > maxWrongClicks)
                     {
-                        SceneManager.LoadScene(gameOverSceneName);                                                                  //Load the game over scene if maximum wrong clicks reached
+                        GameManage.GameManager.ResetScene(); ;                                                                  //Load the game over scene if maximum wrong clicks reached
                     }
 
                     StartCoroutine(DeactivateAndReactivate(hitObject));                                                             //Start the Coroutine to deactivate and reactivate the object

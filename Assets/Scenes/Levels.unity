@@ -743,8 +743,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 443571722}
-        m_TargetAssemblyTypeName: Exit, Assembly-CSharp
-        m_MethodName: ExitScene
+        m_TargetAssemblyTypeName: back, Assembly-CSharp
+        m_MethodName: Back
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -801,7 +801,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 443571717}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2b6d711ec0bd3e49bd5c86aa114d840, type: 3}
+  m_Script: {fileID: 11500000, guid: 800aaea9cbc3f2649827b4a4ea21f232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &531854984

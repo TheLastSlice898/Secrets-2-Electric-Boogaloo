@@ -19,7 +19,6 @@ public class Exit : MonoBehaviour
 
     public void ExitScene()
     {
-        Scene ThisScene = SceneManager.GetActiveScene();
-        SceneManager.UnloadSceneAsync("Levels");
+        Application.Quit();
     }
 }
