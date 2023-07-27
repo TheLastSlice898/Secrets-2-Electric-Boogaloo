@@ -33,10 +33,10 @@ public class PotionMakerScript : MonoBehaviour
     private IEnumerator SpawnObjects()
     {
         
-            List<GameObject> allIngredients = new List<GameObject>();                                                                   //Create a list to store all the ingredients
+            List<GameObject> allIngredients = new List<GameObject>();                                                               //Create a list to store all the ingredients
 
-            allIngredients.AddRange(correctIngredients);                                                                                //Add the correct ingredients to the list
-            allIngredients.AddRange(wrongIngredients);                                                                                  //Add the wrong ingredients to the list
+            allIngredients.AddRange(correctIngredients);                                                                            //Add the correct ingredients to the list
+            allIngredients.AddRange(wrongIngredients);                                                                              //Add the wrong ingredients to the list
 
             ShuffleList(allIngredients);                                                                                                //Shuffle the list of ingredients
 
