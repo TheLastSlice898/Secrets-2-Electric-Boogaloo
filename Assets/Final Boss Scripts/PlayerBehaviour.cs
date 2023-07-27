@@ -62,6 +62,10 @@ public class PlayerBehaviour : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        if (TimeRemaining == 0)
+        {
+            GameManage.GameManager.NextScene();
+        }
     }
 
     void OnTriggerEnter(Collider other)

@@ -9,6 +9,9 @@ public class GameManage : MonoBehaviour
     //SceneName of the current Scene
     public string SceneName;
     public int SceneInt;
+    public bool Debug;
+    public bool PauseMenu;
+    public GameObject PauseMenuOBJ;
     //unlock varaibles for the minigames
     public bool UnlockedCatch;
     public bool UnlockedRepair;
@@ -56,11 +59,26 @@ public class GameManage : MonoBehaviour
         //checks what the active scene for the gamemanaager
         WhatSceneAmI();
         //sets the bool to the Variable of the playerPrefs for debuging 
+        if (PauseMenu)
+        {
+            PauseMenuOBJ.SetActive(true);
+        }
+        else
+        {
+            PauseMenuOBJ.SetActive(false);
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            //was gonna make a escape button for pause but cba at 1am TWT
+        }
     }
 
     public void ResetScene()
     {
         SceneManager.LoadScene(SceneName);
+
     }
 
     public void WhatSceneAmI()
@@ -72,22 +90,45 @@ public class GameManage : MonoBehaviour
     public void StartScene()
     {
         SceneManager.LoadScene(1, LoadSceneMode.Single);
-        SceneManager.LoadScene(8, LoadSceneMode.Additive);
-    }
+        PauseMenu = true;
+        if (Debug)
+        {
+            SceneManager.LoadScene("Debug", LoadSceneMode.Additive);
+        }
 
+    }
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+        PauseMenu = false;
+    }
     public void NextScene()
     {
-        SceneManager.LoadScene(SceneInt+1, LoadSceneMode.Single);
-        SceneManager.LoadScene(8, LoadSceneMode.Additive);
+        SceneManager.LoadScene(SceneInt + 1, LoadSceneMode.Single);
+        PauseMenu = true;
+        if (Debug)
+        {
+            SceneManager.LoadScene("Debug", LoadSceneMode.Additive);
+        }
+        
     }
-    
+    public void PauseMenuStart()
+    {
+        Time.timeScale = 0;
+        SceneManager.LoadScene("PauseMenu", LoadSceneMode.Additive);
+    }
+    public void PauseMenuEnd()
+    {
+        SceneManager.UnloadSceneAsync("PauseMenu");
+        Time.timeScale = 1;
+    }
     public void LoadLevels()
     {
-        SceneManager.LoadScene(7, LoadSceneMode.Additive);
+        SceneManager.LoadScene("Levels", LoadSceneMode.Additive);
     }
     public void LoadCredits()
     {
-        SceneManager.LoadScene(8, LoadSceneMode.Additive);
+        SceneManager.LoadScene("Credits", LoadSceneMode.Additive);
     }
     public void CheckLevels()
     {
