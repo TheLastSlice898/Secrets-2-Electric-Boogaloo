@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         float MoveX = Input.GetAxis("Horizontal");
-        Debug.Log(MoveX);
+        //Debug.Log(MoveX);
         PlayerRB.velocity = new Vector3(MoveX * playerForce,PlayerRB.velocity.y,PlayerRB.velocity.z);
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {

@@ -11,15 +11,16 @@ public class GameManage : MonoBehaviour
     public int SceneInt;
     public bool Debug;
     public bool PauseMenu;
+    public GameObject DebugOBJ;
     public GameObject PauseMenuOBJ;
     //unlock varaibles for the minigames
     public bool UnlockedCatch;
     public bool UnlockedRepair;
-    public bool UnlockedPuzzle;
+    public bool UnlockedButton;
     public bool UnlockedTreeTops;
     public bool UnlockedPursuit;
     public bool UnlockedPotion;
-    public bool UnlockedLockPicking;
+    public bool UnlockedToTheTop;
     public bool UnlockedBoss;
 
     //this makes the game manager a EventBus
@@ -45,17 +46,25 @@ public class GameManage : MonoBehaviour
         //instances all the player Prefrences 
         PlayerPrefs.SetInt("CatchInt", (UnlockedCatch ? 1 : 0));
         PlayerPrefs.SetInt("RepairInt", (UnlockedRepair ? 1 : 0));
-        PlayerPrefs.SetInt("PuzzleInt", (UnlockedPuzzle ? 1 : 0));
+        PlayerPrefs.SetInt("ButtonInt", (UnlockedButton ? 1 : 0));
         PlayerPrefs.SetInt("TreeTopsInt", (UnlockedTreeTops ? 1 : 0));
         PlayerPrefs.SetInt("PursuitInt", (UnlockedPursuit ? 1 : 0));
         PlayerPrefs.SetInt("PotionInt", (UnlockedPotion ? 1 : 0));
-        PlayerPrefs.SetInt("LockpickInt", (UnlockedLockPicking ? 1 : 0));
+        PlayerPrefs.SetInt("ToTheBossInt", (UnlockedToTheTop ? 1 : 0));
         PlayerPrefs.SetInt("BossInt", (UnlockedBoss ? 1 : 0));
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Debug)
+        {
+            DebugOBJ.SetActive(Debug);
+        }
+        else
+        {
+            DebugOBJ.SetActive(Debug);
+        }
         //checks what the active scene for the gamemanaager
         WhatSceneAmI();
         //sets the bool to the Variable of the playerPrefs for debuging 
@@ -101,15 +110,13 @@ public class GameManage : MonoBehaviour
     {
         SceneManager.LoadScene("Menu", LoadSceneMode.Single);
         PauseMenu = false;
+        Time.timeScale = 1;
     }
     public void NextScene()
     {
         SceneManager.LoadScene(SceneInt + 1, LoadSceneMode.Single);
+        gameObject.GetComponent<Achivement_System>().UnlockedLevel();
         PauseMenu = true;
-        if (Debug)
-        {
-            SceneManager.LoadScene("Debug", LoadSceneMode.Additive);
-        }
         
     }
     public void PauseMenuStart()
@@ -134,11 +141,11 @@ public class GameManage : MonoBehaviour
     {
         UnlockedCatch = (PlayerPrefs.GetInt("CatchInt") != 0);
         UnlockedRepair = (PlayerPrefs.GetInt("RepairInt") != 0);
-        UnlockedPuzzle = (PlayerPrefs.GetInt("PuzzleInt") != 0);
+        UnlockedButton = (PlayerPrefs.GetInt("ButtonInt") != 0);
         UnlockedTreeTops = (PlayerPrefs.GetInt("TreeTopsInt") != 0);
         UnlockedPursuit = (PlayerPrefs.GetInt("PursuitInt") != 0);
         UnlockedPotion = (PlayerPrefs.GetInt("PotionInt") != 0);
-        UnlockedLockPicking = (PlayerPrefs.GetInt("LockpickInt") != 0);
+        UnlockedToTheTop = (PlayerPrefs.GetInt("ToTheBossInt") != 0);
         UnlockedBoss = (PlayerPrefs.GetInt("BossInt") != 0);
     }
 }
