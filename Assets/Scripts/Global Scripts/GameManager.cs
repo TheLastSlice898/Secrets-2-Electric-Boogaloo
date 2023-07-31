@@ -11,6 +11,7 @@ public class GameManage : MonoBehaviour
     public int SceneInt;
     public bool Debug;
     public bool PauseMenu;
+    public GameObject DebugOBJ;
     public GameObject PauseMenuOBJ;
     //unlock varaibles for the minigames
     public bool UnlockedCatch;
@@ -56,6 +57,14 @@ public class GameManage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Debug)
+        {
+            DebugOBJ.SetActive(Debug);
+        }
+        else
+        {
+            DebugOBJ.SetActive(Debug);
+        }
         //checks what the active scene for the gamemanaager
         WhatSceneAmI();
         //sets the bool to the Variable of the playerPrefs for debuging 
@@ -101,16 +110,13 @@ public class GameManage : MonoBehaviour
     {
         SceneManager.LoadScene("Menu", LoadSceneMode.Single);
         PauseMenu = false;
+        Time.timeScale = 1;
     }
     public void NextScene()
     {
         SceneManager.LoadScene(SceneInt + 1, LoadSceneMode.Single);
         gameObject.GetComponent<Achivement_System>().UnlockedLevel();
         PauseMenu = true;
-        if (Debug)
-        {
-            SceneManager.LoadScene("Debug", LoadSceneMode.Additive);
-        }
         
     }
     public void PauseMenuStart()
