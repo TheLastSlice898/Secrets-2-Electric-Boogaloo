@@ -21,38 +21,57 @@ public class PlayerController : MonoBehaviour
     {
         
     }
-    
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        float MoveX = Input.GetAxis("Horizontal");
-        //Debug.Log(MoveX);
-        PlayerRB.velocity = new Vector3(MoveX * playerForce,PlayerRB.velocity.y,PlayerRB.velocity.z);
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             Jump();
         }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Jump();
+        }   
     }
-        //Debug.Log(PlayerRB.velocity.magnitude);
-//fuck off cam
-//yea fuck cam
-//<3 you cam
+    // Update is called once per frame
+    private void FixedUpdate()
+    {
+        float MoveX = Input.GetAxis("Horizontal");
+        //Debug.Log(MoveX
+        //PlayerRB.velocity.Normalize();
+        
+        
+        
+        PlayerRB.velocity = new Vector3(MoveX * playerForce,PlayerRB.velocity.y,PlayerRB.velocity.z);
 
-    
+        if (PlayerRB.velocity.magnitude > MaxSpeed)
+        {
+            PlayerRB.velocity = Vector3.ClampMagnitude(PlayerRB.velocity, MaxSpeed);    
+        }
+        
+        
+        
+    }
+    //Debug.Log(PlayerRB.velocity.magnitude);
+    //fuck off cam
+    //yea fuck cam
+    //<3 you cam
+
+
     //Debug.Log(PlayerRB.velocity);
     void Jump()
     {
        if (HasJumped)
        {
-        PlayerRB.AddForce((Vector3.up * JumpHeight), ForceMode.Impulse);
+        //PlayerRB.velocity.Set(0f,0f,0f);
+        PlayerRB.velocity = new Vector3(PlayerRB.velocity.x, JumpHeight,PlayerRB.velocity.z);
         HasJumped = false;
         DoubleJump = true;
        }
        else if (DoubleJump)
        {
-        PlayerRB.velocity.Set(0f,0f,0f);
-        PlayerRB.AddForce((Vector3.up * JumpHeight), ForceMode.Impulse);
-        DoubleJump = false;
+            //PlayerRB.velocity.Set(0f,0f,0f);
+            PlayerRB.velocity = new Vector3(PlayerRB.velocity.x, JumpHeight, PlayerRB.velocity.z);
+            DoubleJump = false;
        }
       
     }
