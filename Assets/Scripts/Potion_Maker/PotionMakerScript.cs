@@ -33,10 +33,10 @@ public class PotionMakerScript : MonoBehaviour
     private IEnumerator SpawnObjects()
     {
         
-            List<GameObject> allIngredients = new List<GameObject>();                                                               //Create a list to store all the ingredients
+            List<GameObject> allIngredients = new List<GameObject>();                                                                   //Create a list to store all the ingredients
 
-            allIngredients.AddRange(correctIngredients);                                                                            //Add the correct ingredients to the list
-            allIngredients.AddRange(wrongIngredients);                                                                              //Add the wrong ingredients to the list
+            allIngredients.AddRange(correctIngredients);                                                                                //Add the correct ingredients to the list
+            allIngredients.AddRange(wrongIngredients);                                                                                  //Add the wrong ingredients to the list
 
             ShuffleList(allIngredients);                                                                                                //Shuffle the list of ingredients
 
@@ -111,7 +111,7 @@ public class PotionMakerScript : MonoBehaviour
 
                     if (clickedCorrectIngredients == correctIngredients.Length)
                     {
-                        GameManage.GameManager.NextScene();                                                                    //Load the win scene if all correct ingredients have been clicked
+                        SceneManager.LoadScene(winSceneName);                                                                       //Load the win scene if all correct ingredients have been clicked
                     }
 
                     Destroy(hitObject);
@@ -123,7 +123,7 @@ public class PotionMakerScript : MonoBehaviour
 
                     if (wrongClicks > maxWrongClicks)
                     {
-                        GameManage.GameManager.ResetScene(); ;                                                                  //Load the game over scene if maximum wrong clicks reached
+                        SceneManager.LoadScene(gameOverSceneName);                                                                  //Load the game over scene if maximum wrong clicks reached
                     }
 
                     StartCoroutine(DeactivateAndReactivate(hitObject));                                                             //Start the Coroutine to deactivate and reactivate the object

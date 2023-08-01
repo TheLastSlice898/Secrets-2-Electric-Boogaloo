@@ -9,25 +9,28 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 5612d1e218bb65b4ab36fbc4456f0e0c
   - enabled: 1
-    path: Assets/Scenes/Catch_The_Book.unity
+    path: Assets/Scenes/Catch.unity
     guid: 1a3867516e8067c449b8db98f4089375
   - enabled: 1
-    path: Assets/Scenes/Repair_The_Book(Bella).unity
+    path: Assets/Scenes/Repair.unity
     guid: 99e9350cb8af3914a9c9b4ef10fd6fd2
   - enabled: 1
-    path: Assets/Scenes/Button_Game.unity
+    path: Assets/Scenes/Button.unity
     guid: caec09c16fa5ba24ebb04724c3a22008
   - enabled: 1
-    path: Assets/Scenes/Platformer.unity
+    path: Assets/Scenes/TreeTops.unity
     guid: 36d6c7c7b46d1a447bad619c6534f3ad
   - enabled: 1
-    path: Assets/Scenes/Potion_Maker.unity
-    guid: 1c6deed62f295624690eb6d205149c5c
-  - enabled: 1
-    path: Assets/Scenes/Temple_Run.unity
+    path: Assets/Scenes/Pursuit.unity
     guid: bdaab24d56d3cad4bb732a3b894951d0
   - enabled: 1
-    path: Assets/Scenes/FinalBoss.unity
+    path: Assets/Scenes/Potion.unity
+    guid: 1c6deed62f295624690eb6d205149c5c
+  - enabled: 1
+    path: Assets/Scenes/ToTheBoss.unity
+    guid: 9d74121f45c46664ea482fb2db732e19
+  - enabled: 1
+    path: Assets/Scenes/Boss.unity
     guid: 088fc12831cc7854fb4822541dba93a8
   - enabled: 1
     path: Assets/Scenes/You_Won_Yippoee.unity
