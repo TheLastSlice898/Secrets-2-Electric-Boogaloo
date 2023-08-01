@@ -87,7 +87,7 @@ public class GameManage : MonoBehaviour
     public void ResetScene()
     {
         SceneManager.LoadScene(SceneName);
-
+        Time.timeScale = 1;
     }
 
     public void WhatSceneAmI()
@@ -100,10 +100,12 @@ public class GameManage : MonoBehaviour
     {
         SceneManager.LoadScene(1, LoadSceneMode.Single);
         PauseMenu = true;
-        if (Debug)
-        {
-            SceneManager.LoadScene("Debug", LoadSceneMode.Additive);
-        }
+
+        
+        //if (Debug)
+        //{
+        //    SceneManager.LoadScene("Debug", LoadSceneMode.Additive);
+        //}
 
     }
     public void MainMenu()
