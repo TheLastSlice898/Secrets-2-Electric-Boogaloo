@@ -21,14 +21,14 @@ public class Instructions : MonoBehaviour
     void Start()
     {
         CurrentIndex = BookIndex;
-        CurrentPage.sprite = Images[CurrentIndex];
+        
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        
+        CurrentPage.sprite = Images[BookIndex];
         //Debug.Log(Images.Count);
         if (Images.Count == BookIndex + 1)
         {
@@ -52,15 +52,19 @@ public class Instructions : MonoBehaviour
 
     public void NextImage()
     {
-        NextPage.sprite = Images[BookIndex + 1];    
         BookAnim.SetTrigger("NextPage");
         BookIndex = BookIndex + 1;
+        NextPage.sprite = Images[BookIndex - 1];
+        
+        
     }
     public void PreviousImage()
     {
-        NextPage.sprite = Images[BookIndex - 1];
         BookAnim.SetTrigger("NextPage");
         BookIndex = BookIndex - 1;
+        NextPage.sprite = Images[BookIndex + 1];
+        ;
+        
     }
 
     public void NoForward()
