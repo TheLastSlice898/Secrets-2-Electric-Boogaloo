@@ -9,20 +9,27 @@ public class GameManage : MonoBehaviour
     //SceneName of the current Scene
     public string SceneName;
     public int SceneInt;
+    public bool bookbool;
     public bool Debug;
     public bool PauseMenu;
     public GameObject DebugOBJ;
     public GameObject PauseMenuOBJ;
+    public GameObject BookOBJ;
     //unlock varaibles for the minigames
     public bool UnlockedCatch;
     public bool UnlockedRepair;
     public bool UnlockedButton;
-    public bool UnlockedTreeTops;
+    public bool UnlockedDungeon;
     public bool UnlockedPursuit;
     public bool UnlockedPotion;
     public bool UnlockedToTheTop;
     public bool UnlockedBoss;
 
+
+    // Start is called before the first frame update
+    //turns the bool between on and off everytime the button is clicked
+
+    //sets the book active according to the bool
     //this makes the game manager a EventBus
     private static GameManage _GameManager;
     public static GameManage GameManager { get { return _GameManager; } }
@@ -47,7 +54,7 @@ public class GameManage : MonoBehaviour
         PlayerPrefs.SetInt("CatchInt", (UnlockedCatch ? 1 : 0));
         PlayerPrefs.SetInt("RepairInt", (UnlockedRepair ? 1 : 0));
         PlayerPrefs.SetInt("ButtonInt", (UnlockedButton ? 1 : 0));
-        PlayerPrefs.SetInt("TreeTopsInt", (UnlockedTreeTops ? 1 : 0));
+        PlayerPrefs.SetInt("DungeonInt", (UnlockedDungeon ? 1 : 0));
         PlayerPrefs.SetInt("PursuitInt", (UnlockedPursuit ? 1 : 0));
         PlayerPrefs.SetInt("PotionInt", (UnlockedPotion ? 1 : 0));
         PlayerPrefs.SetInt("ToTheBossInt", (UnlockedToTheTop ? 1 : 0));
@@ -82,6 +89,27 @@ public class GameManage : MonoBehaviour
         {
             //was gonna make a escape button for pause but cba at 1am TWT
         }
+        BookOBJ.SetActive(bookbool);
+
+        if (bookbool)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+
+        }
+    }
+    public void BookFunction()
+    {
+        if (bookbool)
+        {
+            bookbool = false;
+        }
+        else
+        {
+            bookbool = true;
+        }
     }
 
     public void ResetScene()
@@ -112,6 +140,7 @@ public class GameManage : MonoBehaviour
     {
         SceneManager.LoadScene("Menu", LoadSceneMode.Single);
         PauseMenu = false;
+        bookbool = false;
         Time.timeScale = 1;
     }
     public void NextScene()
@@ -144,7 +173,7 @@ public class GameManage : MonoBehaviour
         UnlockedCatch = (PlayerPrefs.GetInt("CatchInt") != 0);
         UnlockedRepair = (PlayerPrefs.GetInt("RepairInt") != 0);
         UnlockedButton = (PlayerPrefs.GetInt("ButtonInt") != 0);
-        UnlockedTreeTops = (PlayerPrefs.GetInt("TreeTopsInt") != 0);
+        UnlockedDungeon = (PlayerPrefs.GetInt("DungeonInt") != 0);
         UnlockedPursuit = (PlayerPrefs.GetInt("PursuitInt") != 0);
         UnlockedPotion = (PlayerPrefs.GetInt("PotionInt") != 0);
         UnlockedToTheTop = (PlayerPrefs.GetInt("ToTheBossInt") != 0);

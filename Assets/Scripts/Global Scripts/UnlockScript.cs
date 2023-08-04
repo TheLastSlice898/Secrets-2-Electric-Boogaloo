@@ -9,7 +9,7 @@ public class UnlockScript : MonoBehaviour
     public Button Catch; 
     public Button Repair;
     public Button Puzzle;
-    public Button TreeTops;
+    public Button Dungeon;
     public Button Pursuit;
     public Button Potion;
     public Button LockPicking;
@@ -29,9 +29,9 @@ public class UnlockScript : MonoBehaviour
         {
             Puzzle.interactable = true;
         }
-        if (PlayerPrefs.GetInt("TreeTopsInt") == 1)
+        if (PlayerPrefs.GetInt("DungeonInt") == 1)
         {
-            TreeTops.interactable = true;
+            Dungeon.interactable = true;
         }
         if (PlayerPrefs.GetInt("PursuitInt") == 1)
         {

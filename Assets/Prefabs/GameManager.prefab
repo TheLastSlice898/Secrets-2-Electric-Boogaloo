@@ -110,7 +110,7 @@ Transform:
   - {fileID: 4082755561288224840}
   - {fileID: 1560644335082687845}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8668835104867026621
 MonoBehaviour:
@@ -126,10 +126,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: 
   SceneInt: 0
+  bookbool: 0
   Debug: 0
   PauseMenu: 0
   DebugOBJ: {fileID: 2946688870909411505}
   PauseMenuOBJ: {fileID: 6980799038423550179}
+  BookOBJ: {fileID: 0}
   UnlockedCatch: 0
   UnlockedRepair: 0
   UnlockedButton: 0
@@ -1923,7 +1925,6 @@ GameObject:
   - component: {fileID: 7198194227244174480}
   - component: {fileID: 967651844595871217}
   - component: {fileID: 338168653863102995}
-  - component: {fileID: 3815005035145294167}
   m_Layer: 0
   m_Name: helpme
   m_TagString: Untagged
@@ -2034,7 +2035,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3815005035145294167}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BookOpen, Assembly-CSharp
         m_MethodName: BookFunction
         m_Mode: 1
@@ -2046,20 +2047,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3815005035145294167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8031538500311439965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 249cd0209f0da924486918811a1879b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bookbool: 0
-  BookOBJ: {fileID: 8542041164166176635}
 --- !u!1 &8122128143144739786
 GameObject:
   m_ObjectHideFlags: 0
