@@ -7,12 +7,14 @@ using UnityEngine.UI;
 public class Instructions : MonoBehaviour
 {
     public List<Sprite> Images;
-    
+    public Sprite[] BookStates;
     public GameObject ForwardButton;
     public GameObject BackButton;
     public Image CurrentPage;
     public Image NextPage;
     public Animator BookAnim;
+
+    
     [SerializeField]private int BookIndex;
     [SerializeField]private int CurrentIndex;
 

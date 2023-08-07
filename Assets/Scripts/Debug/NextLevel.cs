@@ -9,10 +9,12 @@ public class NextLevel : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            GameManage.GameManager.NextScene();
+            GameManage.GameManager.WinScreen();
         }
-        
-
 
     }
-}
+    public void Press()
+        {
+        GameManage.GameManager.WinScreen();
+        }
+    }

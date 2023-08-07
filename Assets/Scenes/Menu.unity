@@ -700,7 +700,6 @@ GameObject:
   - component: {fileID: 939191856}
   - component: {fileID: 939191855}
   - component: {fileID: 939191854}
-  - component: {fileID: 939191857}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -772,9 +771,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 939191857}
-        m_TargetAssemblyTypeName: Start, Assembly-CSharp
-        m_MethodName: Starts
+      - m_Target: {fileID: 8668835104867026621, guid: 8c2721836cba86348ba2add13ba072cd, type: 3}
+        m_TargetAssemblyTypeName: GameManage, Assembly-CSharp
+        m_MethodName: StartScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -822,18 +821,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939191852}
   m_CullTransparentMesh: 1
---- !u!114 &939191857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 939191852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b07d3d13c10fe94692e747448a5ccda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &948101888
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,6 +1004,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027115421}
   m_CullTransparentMesh: 1
+--- !u!114 &1234449458 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8668835104867026621, guid: 8c2721836cba86348ba2add13ba072cd, type: 3}
+  m_PrefabInstance: {fileID: 3796101359002394120}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7efd9101b625945468fc2f40978d8d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1548231568
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,6 +1533,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 338168653863102995, guid: 8c2721836cba86348ba2add13ba072cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1234449458}
+    - target: {fileID: 338168653863102995, guid: 8c2721836cba86348ba2add13ba072cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BookFunction
+      objectReference: {fileID: 0}
+    - target: {fileID: 338168653863102995, guid: 8c2721836cba86348ba2add13ba072cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManage, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2991357488085720986, guid: 8c2721836cba86348ba2add13ba072cd, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1579,7 +1589,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8668835104867026621, guid: 8c2721836cba86348ba2add13ba072cd, type: 3}
+      propertyPath: Debug
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3815005035145294167, guid: 8c2721836cba86348ba2add13ba072cd, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

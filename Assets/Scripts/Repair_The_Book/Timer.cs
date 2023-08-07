@@ -32,7 +32,7 @@ void Update()
             }
             else
             {
-                GameManage.GameManager.ResetScene();
+                GameManage.GameManager.LoseScreen();
                 timeLeft = 0;
                 timerOn = false;
 

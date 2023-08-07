@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Button.unity
     guid: caec09c16fa5ba24ebb04724c3a22008
   - enabled: 1
-    path: Assets/Scenes/TreeTops.unity
+    path: Assets/Scenes/Dungeon.unity
     guid: 36d6c7c7b46d1a447bad619c6534f3ad
   - enabled: 1
     path: Assets/Scenes/Pursuit.unity
@@ -47,4 +47,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PauseMenu.unity
     guid: e8a5d930123c4324ebd9ed0df179f558
+  - enabled: 1
+    path: Assets/Scenes/You_Won.unity
+    guid: cb2859bc849e50f46bc3b05f2a124777
+  - enabled: 1
+    path: Assets/Scenes/Game_Over.unity
+    guid: 4e27d9141a5ba1e4689bc6b0dc9f7073
   m_configObjects: {}

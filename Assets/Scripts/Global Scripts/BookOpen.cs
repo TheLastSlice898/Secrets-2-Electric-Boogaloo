@@ -23,5 +23,16 @@ public class BookOpen : MonoBehaviour
     public void Update()
     {
         BookOBJ.SetActive(bookbool);
+
+
+
+        if (bookbool)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
     }
 }
