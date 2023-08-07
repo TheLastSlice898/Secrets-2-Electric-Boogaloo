@@ -93,12 +93,12 @@ public class CatchTheBook : MonoBehaviour
         //moves the book left
 
         if(loseTimer <= 0f) {
-            GameManage.GameManager.ResetScene(); 
+            GameManage.GameManager.LoseScreen(); 
         }
 
         if(bookHealth == 0)
         {
-            GameManage.GameManager.NextScene();
+            GameManage.GameManager.WinScreen();
         }
         //reset the scene upon a loss
     }

@@ -8,6 +8,7 @@ public class GameManage : MonoBehaviour
     // Start is called before the first frame update
     //SceneName of the current Scene
     public string SceneName;
+    public string[] SceneOrder;
     public int SceneInt;
     public bool bookbool;
     public bool Debug;
@@ -16,6 +17,7 @@ public class GameManage : MonoBehaviour
     public GameObject PauseMenuOBJ;
     public GameObject BookOBJ;
     //unlock varaibles for the minigames
+    
     public bool UnlockedCatch;
     public bool UnlockedRepair;
     public bool UnlockedButton;
@@ -112,23 +114,36 @@ public class GameManage : MonoBehaviour
         }
     }
 
+    public void WinScreen()
+    {
+        SceneInt++;
+        gameObject.GetComponent<Achivement_System>().UnlockedLevel();
+        SceneManager.LoadScene("You_Won");
+        Time.timeScale = 0;
+    }
+    public void LoseScreen()
+    {
+        SceneManager.LoadScene("Game_Over");
+        Time.timeScale = 0;
+    }
+
     public void ResetScene()
     {
-        SceneManager.LoadScene(SceneName);
+        SceneManager.LoadScene(SceneOrder[SceneInt]);
         Time.timeScale = 1;
     }
 
     public void WhatSceneAmI()
     {
         Scene MyScene = SceneManager.GetActiveScene();
-        SceneInt = MyScene.buildIndex;
         SceneName = MyScene.name;
     }
     public void StartScene()
     {
+
         SceneManager.LoadScene(1, LoadSceneMode.Single);
         PauseMenu = true;
-
+        
         
         //if (Debug)
         //{
@@ -145,10 +160,10 @@ public class GameManage : MonoBehaviour
     }
     public void NextScene()
     {
-        SceneManager.LoadScene(SceneInt + 1, LoadSceneMode.Single);
-        gameObject.GetComponent<Achivement_System>().UnlockedLevel();
+        SceneManager.LoadScene(SceneOrder[SceneInt], LoadSceneMode.Single);
         PauseMenu = true;
-        
+        Time.timeScale = 1;
+
     }
     public void PauseMenuStart()
     {

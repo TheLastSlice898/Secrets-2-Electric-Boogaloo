@@ -125,17 +125,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: 
+  SceneOrder:
+  - Catch
+  - Repair
+  - Button
+  - Dungeon
+  - Pursuit
+  - Potion
+  - ToTheBoss
+  - Boss
   SceneInt: 0
   bookbool: 0
   Debug: 0
   PauseMenu: 0
   DebugOBJ: {fileID: 2946688870909411505}
   PauseMenuOBJ: {fileID: 6980799038423550179}
-  BookOBJ: {fileID: 0}
+  BookOBJ: {fileID: 8542041164166176635}
   UnlockedCatch: 0
   UnlockedRepair: 0
   UnlockedButton: 0
-  UnlockedTreeTops: 0
+  UnlockedDungeon: 0
   UnlockedPursuit: 0
   UnlockedPotion: 0
   UnlockedToTheTop: 0

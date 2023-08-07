@@ -32,7 +32,7 @@ void Update()
             }
             else
             {
-                //Debug.Log("you lose");
+                GameManage.GameManager.LoseScreen();
                 timeLeft = 0;
                 timerOn = false;
 
