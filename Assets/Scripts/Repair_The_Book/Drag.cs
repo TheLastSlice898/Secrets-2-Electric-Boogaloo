@@ -9,7 +9,7 @@ public class Drag : MonoBehaviour
 
         
     Vector3 mousePosition;
-    private bool isDragged = false; 
+    private bool isDragged; 
     private Vector3 getMousePos()
     {
         return Camera.main.WorldToScreenPoint(transform.position);
