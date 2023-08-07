@@ -2,28 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManage : MonoBehaviour
 {
-    // Start is called before the first frame update
-    //SceneName of the current Scene
-    public string SceneName;
-    public int SceneInt;
-    public bool Debug;
-    public bool PauseMenu;
-    public GameObject DebugOBJ;
-    public GameObject PauseMenuOBJ;
+    
+    public string SceneName;        //SceneName of the current Scene
+    public string[] SceneOrder;     //States the order of the scenes in a array        
+    public int SceneInt;            //a int represetning the current buildscene
+    public bool bookbool;               //a bool to check if the instrcution book is active 
+    public bool Debug;              //bool for debug menu for testing
+    public bool PauseMenu;          //book for if the pause menu can be seen
+    public GameObject DebugOBJ;         //the debug canvas
+    public GameObject PauseMenuOBJ;         //the Pause Menu canvas
+    public GameObject BookInstructions;         //the Instruction canvas
+    public Image BookSprite;         //the image of the book that opens when you open the instruction menu
     //unlock varaibles for the minigames
+    //in a bool
     public bool UnlockedCatch;
     public bool UnlockedRepair;
     public bool UnlockedButton;
-    public bool UnlockedTreeTops;
+    public bool UnlockedDungeon;
     public bool UnlockedPursuit;
     public bool UnlockedPotion;
     public bool UnlockedToTheTop;
     public bool UnlockedBoss;
 
-    //this makes the game manager a EventBus
+
+    //This is the event bus and enables me to access this script from anywhere
+    //This also states that if their is another one of this script in the scene delete the obj
     private static GameManage _GameManager;
     public static GameManage GameManager { get { return _GameManager; } }
 
@@ -43,11 +50,11 @@ public class GameManage : MonoBehaviour
 
     void Start()
     {
-        //instances all the player Prefrences 
+        //instances all the player Prefrences at the start of the game
         PlayerPrefs.SetInt("CatchInt", (UnlockedCatch ? 1 : 0));
         PlayerPrefs.SetInt("RepairInt", (UnlockedRepair ? 1 : 0));
         PlayerPrefs.SetInt("ButtonInt", (UnlockedButton ? 1 : 0));
-        PlayerPrefs.SetInt("TreeTopsInt", (UnlockedTreeTops ? 1 : 0));
+        PlayerPrefs.SetInt("DungeonInt", (UnlockedDungeon ? 1 : 0));
         PlayerPrefs.SetInt("PursuitInt", (UnlockedPursuit ? 1 : 0));
         PlayerPrefs.SetInt("PotionInt", (UnlockedPotion ? 1 : 0));
         PlayerPrefs.SetInt("ToTheBossInt", (UnlockedToTheTop ? 1 : 0));
@@ -57,6 +64,7 @@ public class GameManage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if the debug bool is active turn the menu on and off
         if (Debug)
         {
             DebugOBJ.SetActive(Debug);
@@ -65,9 +73,12 @@ public class GameManage : MonoBehaviour
         {
             DebugOBJ.SetActive(Debug);
         }
-        //checks what the active scene for the gamemanaager
+
+        //see line 139 for function info
         WhatSceneAmI();
-        //sets the bool to the Variable of the playerPrefs for debuging 
+
+
+        //if the pausemenu bool is active turn the menu on and off 
         if (PauseMenu)
         {
             PauseMenuOBJ.SetActive(true);
@@ -77,30 +88,74 @@ public class GameManage : MonoBehaviour
             PauseMenuOBJ.SetActive(false);
         }
 
-
+        //might be something in the future idk
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             //was gonna make a escape button for pause but cba at 1am TWT
         }
+        //sets the book active if the bool is active. 
+        BookInstructions.SetActive(bookbool);
+
+        //changes the sprite according to the bool
+        if (bookbool)
+        {
+            //changes the sprite from the book inscruction array
+            BookSprite.sprite = BookInstructions.GetComponent<Instructions>().BookStates[1];
+            //sets time to 0 when the bool is active
+            Time.timeScale = 0;
+        }
+        else
+        {
+            //changes the sprite from the book inscruction array
+            BookSprite.sprite = BookInstructions.GetComponent<Instructions>().BookStates[0];
+        }
+    }
+    //basic unary negation
+    public void BookFunction()
+    {
+        if (bookbool)
+        {
+            bookbool = false;
+        }
+        else
+        {
+            bookbool = true;
+        }
+    }
+    //win function for winning
+    public void WinScreen()
+    {
+        
+        SceneInt++;     //increases the scene int each time the player finishes a level
+        PauseMenu = false;      //makes the pause menu disappear
+        gameObject.GetComponent<Achivement_System>().UnlockedLevel();       //checks the name of the scene and then unlocks the level later
+        SceneManager.LoadScene("You_Won"); //load the win scene
+        Time.timeScale = 0; //time = 0 //ZA WARLDO
+    }
+    public void LoseScreen()
+    {
+        PauseMenu = false; //fuck off wodah
+        SceneManager.LoadScene("Game_Over"); //activates the funny "L" scene
+        Time.timeScale = 0; //yea you get the drill
     }
 
     public void ResetScene()
     {
-        SceneManager.LoadScene(SceneName);
-        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneOrder[SceneInt]); //loads the scene of the current int but for somereaons doesnet work idfk
+        Time.timeScale = 1; //time go zooooooooooooooooooom
     }
-
+    //checks what the active scene for the Game Manager and sets the code for it
     public void WhatSceneAmI()
     {
-        Scene MyScene = SceneManager.GetActiveScene();
-        SceneInt = MyScene.buildIndex;
-        SceneName = MyScene.name;
+        Scene MyScene = SceneManager.GetActiveScene(); //get scene name 
+        SceneName = MyScene.name; //WHAT's MY NAME,WHAT's MY NAME,WHAT's MY NAME,WHAT's MY NAME,WHAT's MY NAME,WHAT's MY NAME,WHAT's MY NAME,WHAT's MY NAME,
     }
     public void StartScene()
     {
-        SceneManager.LoadScene(1, LoadSceneMode.Single);
-        PauseMenu = true;
-
+        PauseMenu = true; //yes
+        SceneManager.LoadScene(1, LoadSceneMode.Single); //load the first scene
+        
+        
         
         //if (Debug)
         //{
@@ -112,39 +167,46 @@ public class GameManage : MonoBehaviour
     {
         SceneManager.LoadScene("Menu", LoadSceneMode.Single);
         PauseMenu = false;
+        bookbool = false;
         Time.timeScale = 1;
     }
     public void NextScene()
     {
-        SceneManager.LoadScene(SceneInt + 1, LoadSceneMode.Single);
-        gameObject.GetComponent<Achivement_System>().UnlockedLevel();
+        SceneManager.LoadScene(SceneOrder[SceneInt], LoadSceneMode.Single);
+        print(SceneInt);
         PauseMenu = true;
-        
+        Time.timeScale = 1;
+
     }
     public void PauseMenuStart()
     {
-        Time.timeScale = 0;
+        //loads pause menu
+        Time.timeScale = 0; //stop hammer time
         SceneManager.LoadScene("PauseMenu", LoadSceneMode.Additive);
     }
     public void PauseMenuEnd()
     {
+        //unload pause menu
         SceneManager.UnloadSceneAsync("PauseMenu");
-        Time.timeScale = 1;
+        Time.timeScale = 1; //NOT GONNA CATCH ME ALIVE. IM THE GINGER BREAD MAN
     }
     public void LoadLevels()
     {
+        //loads levels scene
         SceneManager.LoadScene("Levels", LoadSceneMode.Additive);
     }
     public void LoadCredits()
     {
+        //loads credits scene
         SceneManager.LoadScene("Credits", LoadSceneMode.Additive);
     }
     public void CheckLevels()
     {
+        //checks all the player prefs and sets the bools accordingly
         UnlockedCatch = (PlayerPrefs.GetInt("CatchInt") != 0);
         UnlockedRepair = (PlayerPrefs.GetInt("RepairInt") != 0);
         UnlockedButton = (PlayerPrefs.GetInt("ButtonInt") != 0);
-        UnlockedTreeTops = (PlayerPrefs.GetInt("TreeTopsInt") != 0);
+        UnlockedDungeon = (PlayerPrefs.GetInt("DungeonInt") != 0);
         UnlockedPursuit = (PlayerPrefs.GetInt("PursuitInt") != 0);
         UnlockedPotion = (PlayerPrefs.GetInt("PotionInt") != 0);
         UnlockedToTheTop = (PlayerPrefs.GetInt("ToTheBossInt") != 0);

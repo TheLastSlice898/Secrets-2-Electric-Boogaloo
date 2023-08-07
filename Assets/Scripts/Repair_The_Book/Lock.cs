@@ -64,6 +64,7 @@ public class Lock : MonoBehaviour
     {
         if(CardTotal == 6) 
         {
+            GameManage.GameManager.WinScreen();
             //Debug.Log("op");
             timer.GetComponent<Timer>().timerOn = false;
             
