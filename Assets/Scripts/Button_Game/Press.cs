@@ -42,6 +42,8 @@ public class Press : MonoBehaviour
     private void OnMouseUp() 
     {
         Debug.Log("you win");
+        GameManage.GameManager.NextScene();
+        
     }
 }
 
