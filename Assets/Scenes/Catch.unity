@@ -508,7 +508,7 @@ PrefabInstance:
     - target: {fileID: -4683669308469848369, guid: 66456ebacbff77147be2eef9a2f533d6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 02346938b35f7d745b4ff35b4633cb54, type: 2}
+      objectReference: {fileID: 2100000, guid: 588658bae476cc94095390e92495429f, type: 2}
     - target: {fileID: 919132149155446097, guid: 66456ebacbff77147be2eef9a2f533d6, type: 3}
       propertyPath: m_Name
       value: BookClosed (10)
@@ -587,7 +587,7 @@ PrefabInstance:
     - target: {fileID: -4683669308469848369, guid: 66456ebacbff77147be2eef9a2f533d6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4b188eb11a24c4d469e3aa48e93dd9f3, type: 2}
+      objectReference: {fileID: 2100000, guid: d96c94b33067cb2429ac97625b8c2f0b, type: 2}
     - target: {fileID: 919132149155446097, guid: 66456ebacbff77147be2eef9a2f533d6, type: 3}
       propertyPath: m_Name
       value: BookClosed (6)
@@ -671,7 +671,7 @@ PrefabInstance:
     - target: {fileID: -4683669308469848369, guid: 66456ebacbff77147be2eef9a2f533d6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 02346938b35f7d745b4ff35b4633cb54, type: 2}
+      objectReference: {fileID: 2100000, guid: cbf2dd2f549dfe24abf838a67bc1182d, type: 2}
     - target: {fileID: 919132149155446097, guid: 66456ebacbff77147be2eef9a2f533d6, type: 3}
       propertyPath: m_Name
       value: BookClosed (1)
@@ -999,7 +999,7 @@ PrefabInstance:
     - target: {fileID: -4683669308469848369, guid: 66456ebacbff77147be2eef9a2f533d6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4b188eb11a24c4d469e3aa48e93dd9f3, type: 2}
+      objectReference: {fileID: 2100000, guid: cbf2dd2f549dfe24abf838a67bc1182d, type: 2}
     - target: {fileID: 919132149155446097, guid: 66456ebacbff77147be2eef9a2f533d6, type: 3}
       propertyPath: m_Name
       value: BookClosed (11)
@@ -1083,7 +1083,7 @@ PrefabInstance:
     - target: {fileID: -4683669308469848369, guid: 66456ebacbff77147be2eef9a2f533d6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4b188eb11a24c4d469e3aa48e93dd9f3, type: 2}
+      objectReference: {fileID: 2100000, guid: cbf2dd2f549dfe24abf838a67bc1182d, type: 2}
     - target: {fileID: 919132149155446097, guid: 66456ebacbff77147be2eef9a2f533d6, type: 3}
       propertyPath: m_Name
       value: BookClosed (16)
@@ -1162,7 +1162,7 @@ PrefabInstance:
     - target: {fileID: -4683669308469848369, guid: 66456ebacbff77147be2eef9a2f533d6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 02346938b35f7d745b4ff35b4633cb54, type: 2}
+      objectReference: {fileID: 2100000, guid: cbf2dd2f549dfe24abf838a67bc1182d, type: 2}
     - target: {fileID: 919132149155446097, guid: 66456ebacbff77147be2eef9a2f533d6, type: 3}
       propertyPath: m_Name
       value: BookClosed (2)
@@ -1392,7 +1392,7 @@ PrefabInstance:
     - target: {fileID: -4683669308469848369, guid: 66456ebacbff77147be2eef9a2f533d6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 02346938b35f7d745b4ff35b4633cb54, type: 2}
+      objectReference: {fileID: 2100000, guid: cbf2dd2f549dfe24abf838a67bc1182d, type: 2}
     - target: {fileID: 919132149155446097, guid: 66456ebacbff77147be2eef9a2f533d6, type: 3}
       propertyPath: m_Name
       value: BookClosed (4)
@@ -1575,7 +1575,7 @@ PrefabInstance:
     - target: {fileID: -4683669308469848369, guid: 66456ebacbff77147be2eef9a2f533d6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4b188eb11a24c4d469e3aa48e93dd9f3, type: 2}
+      objectReference: {fileID: 2100000, guid: cbf2dd2f549dfe24abf838a67bc1182d, type: 2}
     - target: {fileID: 919132149155446097, guid: 66456ebacbff77147be2eef9a2f533d6, type: 3}
       propertyPath: m_Name
       value: BookClosed (9)
@@ -2275,7 +2275,7 @@ PrefabInstance:
     - target: {fileID: -4683669308469848369, guid: 66456ebacbff77147be2eef9a2f533d6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 02346938b35f7d745b4ff35b4633cb54, type: 2}
+      objectReference: {fileID: 2100000, guid: 588658bae476cc94095390e92495429f, type: 2}
     - target: {fileID: 919132149155446097, guid: 66456ebacbff77147be2eef9a2f533d6, type: 3}
       propertyPath: m_Name
       value: BookClosed (13)
@@ -2540,7 +2540,7 @@ PrefabInstance:
     - target: {fileID: -4683669308469848369, guid: 66456ebacbff77147be2eef9a2f533d6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4b188eb11a24c4d469e3aa48e93dd9f3, type: 2}
+      objectReference: {fileID: 2100000, guid: cbf2dd2f549dfe24abf838a67bc1182d, type: 2}
     - target: {fileID: 919132149155446097, guid: 66456ebacbff77147be2eef9a2f533d6, type: 3}
       propertyPath: m_Name
       value: BookClosed (14)
