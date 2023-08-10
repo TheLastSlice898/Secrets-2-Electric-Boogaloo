@@ -9,8 +9,6 @@ public class PotionMakerScript : MonoBehaviour
     public GameObject[] correctIngredients;                                                                                         //Array of correct ingredients
     public GameObject[] wrongIngredients;                                                                                           //Array of wrong ingredients
     public Transform spawnLocation;                                                                                                 //Reference to spawn location object
-    public string winSceneName = "Win_Scene";                                                                                       //Name of the win scene
-    public string gameOverSceneName = "Game_Over";                                                                                  //Name of the game over scene
     public int maxWrongClicks = 3;                                                                                                  //Maximum allowed wrong clicks
     public Slider hpSlider;                                                                                                         //Reference to the hp slider component
     public float spawnDelay = 1f;                                                                                                   //Delay between each spawn
@@ -111,7 +109,7 @@ public class PotionMakerScript : MonoBehaviour
 
                     if (clickedCorrectIngredients == correctIngredients.Length)
                     {
-                        SceneManager.LoadScene(winSceneName);                                                                       //Load the win scene if all correct ingredients have been clicked
+                        GameManage.GameManager.WinScreen();                                                                       //Load the win scene if all correct ingredients have been clicked
                     }
 
                     Destroy(hitObject);
@@ -123,7 +121,7 @@ public class PotionMakerScript : MonoBehaviour
 
                     if (wrongClicks > maxWrongClicks)
                     {
-                        SceneManager.LoadScene(gameOverSceneName);                                                                  //Load the game over scene if maximum wrong clicks reached
+                        GameManage.GameManager.LoseScreen();                                                                  //Load the game over scene if maximum wrong clicks reached
                     }
 
                     StartCoroutine(DeactivateAndReactivate(hitObject));                                                             //Start the Coroutine to deactivate and reactivate the object

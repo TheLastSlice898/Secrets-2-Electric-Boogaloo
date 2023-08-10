@@ -75,7 +75,7 @@ public class GameManage : MonoBehaviour
         }
 
         //see line 139 for function info
-        WhatSceneAmI();
+
 
 
         //if the pausemenu bool is active turn the menu on and off 
@@ -141,22 +141,25 @@ public class GameManage : MonoBehaviour
 
     public void ResetScene()
     {
-        SceneManager.LoadScene(SceneOrder[SceneInt]); //loads the scene of the current int but for somereaons doesnet work idfk
+        Scene TheScene = SceneManager.GetSceneByName(SceneOrder[SceneInt]);
+        print(SceneInt);
+        SceneManager.LoadScene(SceneOrder[SceneInt]);                                   //loads the scene of the current int but for somereaons doesnet work idfk
         Time.timeScale = 1; //time go zooooooooooooooooooom
     }
     //checks what the active scene for the Game Manager and sets the code for it
     public void WhatSceneAmI()
     {
-        Scene MyScene = SceneManager.GetActiveScene(); //get scene name 
+        Scene MyScene = SceneManager.GetSceneByName(SceneOrder[SceneInt]); //get scene name 
         SceneName = MyScene.name; //WHAT's MY NAME,WHAT's MY NAME,WHAT's MY NAME,WHAT's MY NAME,WHAT's MY NAME,WHAT's MY NAME,WHAT's MY NAME,WHAT's MY NAME,
     }
     public void StartScene()
     {
         PauseMenu = true; //yes
+        SceneName = SceneOrder[0];
         SceneManager.LoadScene(1, LoadSceneMode.Single); //load the first scene
         
-        
-        
+
+
         //if (Debug)
         //{
         //    SceneManager.LoadScene("Debug", LoadSceneMode.Additive);
@@ -174,6 +177,7 @@ public class GameManage : MonoBehaviour
     {
         SceneManager.LoadScene(SceneOrder[SceneInt], LoadSceneMode.Single);
         print(SceneInt);
+        WhatSceneAmI();
         PauseMenu = true;
         Time.timeScale = 1;
 
