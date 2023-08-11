@@ -18,7 +18,7 @@ public class LeftTriggerScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Sending Magic Right");
+        //Debug.Log("Sending Magic Right");
         other.gameObject.GetComponent<ProjectileBehaviour>().projPosition = 3;
     }
 }
