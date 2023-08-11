@@ -17,11 +17,11 @@ public class ProjectileBehaviour : MonoBehaviour
     void Update()
     {
         if(projPosition == 1) {
-            transform.position += new Vector3(0,0,-7 * projSpeed) * Time.deltaTime; 
+            transform.position += new Vector3(0,0,-5 * projSpeed) * Time.deltaTime; 
         }
     
         if(projPosition == 2) {
-            transform.position += new Vector3(0,0,7 * projSpeed) * Time.deltaTime; 
+            transform.position += new Vector3(0,0,5 * projSpeed) * Time.deltaTime; 
         }
 
         if(projPosition == 3) {
