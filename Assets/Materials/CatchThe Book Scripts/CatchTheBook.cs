@@ -21,6 +21,12 @@ public class CatchTheBook : MonoBehaviour
     public float loseTimer; 
     //a seperate, overall timer that does not reset, tied to the lose condition 
 
+    public GameObject leftBookshelf; 
+    public GameObject rightBookshelf; 
+    public int rumbleTime; 
+    public bool canRumble; 
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +67,18 @@ public class CatchTheBook : MonoBehaviour
         }
         //sets the variable to allow the player to catch the book
 
+        if(secondCounter >= rumbleTime && FlyTime >= 7 && BookIsFlying == false && canRumble == true && BookOnLeft == true) {
+            //Debug.Log("Shake your booky maker"); 
+            leftBookshelf.GetComponent<Animator>().SetTrigger("BookTrigger"); 
+            canRumble = false; 
+        }
+
+        if(secondCounter >= rumbleTime && FlyTime >= 7 && BookIsFlying == false && canRumble == true && BookOnRight == true) {
+            //Debug.Log("Shake your booky maker"); 
+            rightBookshelf.GetComponent<Animator>().SetTrigger("BookTrigger"); 
+            canRumble = false; 
+        }
+
         //the behaviour for when the player catches the book
         if(Input.GetKeyDown("space") && BookIsFlying == true) {
             bookHealth -= 1; //lowers the health
@@ -79,7 +97,13 @@ public class CatchTheBook : MonoBehaviour
 
             RandomiseFlyTime(); //get a new random fly time
             BookIsFlying = false; //ensures the player cannot catch the book multiple times at once 
+        } 
+
+        if(Input.GetKeyDown("space") && BookIsFlying == false) {
+            loseTimer -= 2; 
+            timeBox.text = "Time Remaining: " + loseTimer;
         }
+        //fuck you Paul
         
 
         if(BookIsFlying == true && BookOnLeft == true) {
@@ -105,7 +129,9 @@ public class CatchTheBook : MonoBehaviour
 
     public void RandomiseFlyTime()
     {
-        FlyTime = Random.Range(1,6); //randomises the amount of seconds before the book flies
+        FlyTime = Random.Range(1,9); //randomises the amount of seconds before the book flies
+        rumbleTime = Random.Range(2,6);
+        canRumble = true; 
     }
 
     public void MoveBookRight()
@@ -125,4 +151,6 @@ public class CatchTheBook : MonoBehaviour
         transform.position = new Vector3(-5.5f, 0.87f, -7.2f); 
     }
     //function to be activated by a trigger
+
+
 }

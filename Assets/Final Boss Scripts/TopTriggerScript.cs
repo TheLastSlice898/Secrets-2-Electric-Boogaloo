@@ -18,7 +18,7 @@ public class TopTriggerScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Sending Magic Down");
+        //Debug.Log("Sending Magic Down");
         other.gameObject.GetComponent<ProjectileBehaviour>().projPosition = 1;
     }
 }
