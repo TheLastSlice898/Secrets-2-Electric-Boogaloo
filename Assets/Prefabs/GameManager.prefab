@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 2991357488085720986}
   - component: {fileID: 8668835104867026621}
   - component: {fileID: 8364028742742693439}
+  - component: {fileID: 3150322896577394727}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -110,7 +111,7 @@ Transform:
   - {fileID: 4082755561288224840}
   - {fileID: 1560644335082687845}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8668835104867026621
 MonoBehaviour:
@@ -135,6 +136,7 @@ MonoBehaviour:
   - ToTheBoss
   - Boss
   - You_Won_Yippoee
+  SceneInt: 0
   bookbool: 0
   Debug: 1
   PauseMenu: 0
@@ -163,6 +165,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: 
+--- !u!114 &3150322896577394727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181987929251139525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78bd7bedb01cc084e8801d1674fb3bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FullScreenInt: 0
 --- !u!1 &341749725889468982
 GameObject:
   m_ObjectHideFlags: 0

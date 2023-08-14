@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
-using UnityEditor.Presets;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -42,7 +40,7 @@ public class Press : MonoBehaviour
     private void OnMouseUp() 
     {
         Debug.Log("you win");
-        GameManage.GameManager.NextScene();
+        GameManage.GameManager.WinScreen();
         
     }
 }
