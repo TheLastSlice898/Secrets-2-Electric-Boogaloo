@@ -8,82 +8,99 @@ using UnityEngine.UI;
 
 public class GTTS_Stairs : MonoBehaviour
 {
-    public AudioClip RightVoice;
-    public AudioClip LeftVoice;
-    public GameObject Stairs;
-
-
-    private AudioClip selectedAudio;
-
+    public AudioSource voiceSource;
+    public AudioClip leftVoice;
+    public AudioClip rightVoice;
+    
     public bool winConditionMet;
     public bool lossConditionMet;
-    public bool canAppearAgain;
+    public GTTS_Controller controller;
 
-    public float pressTimeout = 3f;                                                                                                 //Time allowed to click an object
-    private float lastKeyPressTime = 0f;
-
-    private GTTS_Controller controllerScript;
-    //private GTTS_ObjectPool ObjectPoolManager;
-
-    private void Awake()
+    // Start is called before the first frame update
+    void Start()
     {
-        controllerScript = FindObjectOfType<GTTS_Controller>(); // Get a reference to the GTTS_Controller script
-        PlayRandomAudio();
-    }
-
-    private void PlayRandomAudio()
-    {
-        AudioClip selectedAudio = Random.Range(0f, 1f) < 0.5f ? RightVoice : LeftVoice;
-
-        GetComponent<AudioSource>().clip = selectedAudio; //play the selected audio source
-        GetComponent<AudioSource>().Play();
-
+        controller = GameObject.FindObjectOfType<GTTS_Controller>();
+        voiceSource = gameObject.GetComponent<AudioSource>();
+        PlayRandomClip();
+        Debug.Log("playing Audio");
 
 
     }
 
+  public void PlayRandomClip()
 
+    {
+
+        if (Random.Range(0, 2) == 0)
+
+        {
+
+            voiceSource.clip = leftVoice;
+            voiceSource.Play(); 
+
+            Debug.Log("leftClip");
+        }
+
+        else 
+
+        {
+
+            voiceSource.clip = rightVoice;
+            voiceSource.Play();
+
+            Debug.Log("rightClip");
+        }
+    }
+   
     private void Update()
     {
-        if (Time.time - lastKeyPressTime > pressTimeout)
-        {
-            lossConditionMet = true;
-            controllerScript.LossConditionMet(); // Inform the controller script
-        }
+            
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && voiceSource.clip == leftVoice)
+            {
+                winConditionMet = true;
+                Debug.Log("LeftArrow Pressed - winConditionMet: " + winConditionMet);
 
-        if (Input.GetKeyDown(KeyCode.RightArrow) && selectedAudio == RightVoice)
+                if (controller != null)
+                {
+                    controller.WinConditionMet();
+                }
+
+                Destroy(gameObject);
+            }
+            else if (Input.anyKeyDown && !Input.GetKeyDown(KeyCode.LeftArrow) && voiceSource.clip == leftVoice)
+            {
+                winConditionMet = false;
+                Debug.Log("LeftArrow Not Pressed - winConditionMet: " + winConditionMet);
+
+                if (controller != null)
+                {
+                    controller.LossConditionMet();
+                }
+
+                Destroy(gameObject);
+            }
+
+
+
+
+        if (Input.GetKeyDown(KeyCode.RightArrow) && voiceSource.clip == rightVoice)
         {
             winConditionMet = true;
-            lastKeyPressTime = Time.time;
-            Debug.Log("Right");
-            controllerScript.WinConditionMet(); // Inform the controller script
-        }
-        else if (Input.GetKeyDown(KeyCode.RightArrow) && selectedAudio == LeftVoice)
-        {
-            lossConditionMet = true;
-            controllerScript.LossConditionMet();
-        }
+            Debug.Log("RightArrow Pressed - winConditionMet: " + winConditionMet);
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && selectedAudio == LeftVoice)
-        {
-            winConditionMet = true;
-            lastKeyPressTime = Time.time;
-            Debug.Log("Left");
+            Destroy(gameObject);
+         
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow) && selectedAudio == RightVoice)
+        else if (Input.anyKeyDown && !Input.GetKeyDown(KeyCode.LeftArrow) && voiceSource.clip == rightVoice)
         {
-            lossConditionMet = true;
-            controllerScript.LossConditionMet();
+            winConditionMet = false;
+            Debug.Log("RightArrow Not Pressed - winConditionMet: " + winConditionMet);
+
+            Destroy(gameObject);
+            if (!winConditionMet)
+            {
+                lossConditionMet = true;
+            }
         }
-    }
-    private void WinOrLossConditionMet()
-    {
-        GTTS_Controller.Instance.WinConditionMet();  // When a win or loss condition is met, you can call ActivateRandomObject from the ObjectPoolManager
-        GTTS_Controller.Instance.LossConditionMet();
     }
 }
-
-
-
-
-

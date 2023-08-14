@@ -51,7 +51,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RightVoice: {fileID: 0}
   LeftVoice: {fileID: 0}
-  Stairs: {fileID: 0}
   winConditionMet: 0
   lossConditionMet: 0
   canAppearAgain: 0
@@ -70,7 +69,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RightVoice: {fileID: 8300000, guid: e9a23ce06ad0e134e8e3474710cd980a, type: 3}
   LeftVoice: {fileID: 8300000, guid: 0281cad175708a048bf9777834bfc57c, type: 3}
-  Stairs: {fileID: 0}
   winConditionMet: 0
   lossConditionMet: 0
   canAppearAgain: 0

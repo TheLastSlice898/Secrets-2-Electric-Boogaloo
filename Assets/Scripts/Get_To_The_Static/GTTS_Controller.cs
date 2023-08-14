@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GTTS_Controller : MonoBehaviour
@@ -10,75 +8,82 @@ public class GTTS_Controller : MonoBehaviour
     public GameObject[] sceneObjects;
     public Slider hpSlider;
     public Transform spawnLocation;
-    public int maxlossConditionMet = 2;
-    private int winConditionMet = 0;
-    private int lossConditionMet = 0;
-    public GTTS_Stairs stairsScript;
-    //public GTTS_ObjectPool objectPoolManager;
-    //public GTTS_Debris debrisScript;
-    //public GTTS_Magic magicScript; 
-    private GameObject activeObject; // Reference to the active object
+    public int maxLossConditions = 3; // Change to 3
+    public int maxWinConditions = 10; // Change to 10
+    private int winConditionsMet = 0;
+    private int lossConditionsMet = 0;
+    private GameObject activeObject;
+    public float prefabLifetime = 10f; // Lifetime of each prefab
 
-    private GTTS_Stairs instantiatedStairsScript;
-    public static GTTS_Controller Instance { get; private set; }
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        hpSlider.maxValue = maxlossConditionMet;
+        hpSlider.maxValue = maxLossConditions;
         hpSlider.value = 0;
-        int randomIndex = Random.Range(0, sceneObjects.Length);
-        CreateNewObject();
-        GameObject randomPrefab = sceneObjects[randomIndex];
-        GameObject instantiatedObject = Instantiate(randomPrefab, spawnLocation.position, spawnLocation.rotation);
-        instantiatedStairsScript = instantiatedObject.GetComponent<GTTS_Stairs>(); //Get the GTTS_Stairs script of the instantiated prefab
-    }
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        SpawnRandomPrefab();
     }
 
-    // Update is called once per frame
     public void WinConditionMet()
     {
-        winConditionMet++;
-        Destroy(activeObject); // Destroy the active GameObject
-        CreateNewObject(); // Create a new object
-
-        if (winConditionMet == 10)
+        winConditionsMet++;
+        if (winConditionsMet >= maxWinConditions)
         {
-            GameManage.GameManager.WinScreen();
+            GameManage.GameManager.WinScreen();                                                                       //Load the win scene if all correct ingredients have been clicked
+        
+    }
+        else
+        {
+            SpawnRandomPrefab();
         }
     }
 
     public void LossConditionMet()
     {
-        lossConditionMet++;
-        Destroy(activeObject); // Destroy the active GameObject
-        CreateNewObject(); // Create a new object
-
-        if (lossConditionMet == maxlossConditionMet)
+        lossConditionsMet++;
+        if (lossConditionsMet >= maxLossConditions)
+        { 
+            GameManage.GameManager.LoseScreen();                                                                       //Load the win scene if all correct ingredients have been clicked
+        }
+        else
         {
-            GameManage.GameManager.LoseScreen();
+            SpawnRandomPrefab();
         }
     }
 
-    private void CreateNewObject()
+    private IEnumerator TimeoutObject(GameObject obj)
     {
+        yield return new WaitForSeconds(prefabLifetime);
+        LossConditionMet(); // Called when prefab lifetime expires
+    }
+
+    private void SpawnRandomPrefab()
+    {
+        if (activeObject != null)
+        {
+            Destroy(activeObject);
+        }
+
         int randomIndex = Random.Range(0, sceneObjects.Length);
         GameObject randomPrefab = sceneObjects[randomIndex];
         activeObject = Instantiate(randomPrefab, spawnLocation.position, spawnLocation.rotation);
+
+        GTTS_Stairs stairsScript = activeObject.GetComponent<GTTS_Stairs>();
+        if (stairsScript != null)
+        {
+            stairsScript.controller = this;
+        }
+
+        GTTS_Debris debrisScript = activeObject.GetComponent<GTTS_Debris>();
+        if (debrisScript != null)
+        {
+            debrisScript.controller = this;
+        }
+
+        GTTS_Magic magicScript = activeObject.GetComponent<GTTS_Magic>();
+        if (magicScript != null)
+        {
+            magicScript.controller = this;
+        }
+
+        StartCoroutine(TimeoutObject(activeObject));
     }
 }
-
-
-
-
-
