@@ -17,6 +17,6 @@ public class ExitPortal : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-        GameManage.GameManager.NextScene();
+        GameManage.GameManager.WinScreen();
     }
 }
