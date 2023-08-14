@@ -12,10 +12,10 @@ public class CameraTrack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(CamTrans.position, gameObject.transform.position) > distancethreshold)
-        {
-           transform.position =  Vector3.MoveTowards(transform.position, CamTrans.position, Speed * Time.deltaTime);
-        }
+        //if (Vector3.Distance(CamTrans.position, gameObject.transform.position) > distancethreshold)
+        //{
+        //   transform.position =  Vector3.MoveTowards(transform.position, CamTrans.position, Speed * Time.deltaTime);
+        //}
         
         gameObject.transform.LookAt(PlayerLook);
     }
