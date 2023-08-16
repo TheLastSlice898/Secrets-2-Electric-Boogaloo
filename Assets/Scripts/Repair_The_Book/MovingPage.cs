@@ -6,17 +6,32 @@ using UnityEngine;
 public class MovingPage : MonoBehaviour
 {
     public GameObject page; 
-    public Transform[] movement; 
-
-    void Start()
+    public Transform[] movement;
+        
+    private void Start()
     {
-        int RandomInt = Random.Range(0, movement.Length);
-        page.transform.position = movement[RandomInt].position; 
+        StartCoroutine(PageMove());
 
 
     }
 
-   
+    private void Update()
+    {
+     
 
+    }
+
+
+    IEnumerator PageMove()
+    {
+
+        int RandomInt = Random.Range(0, movement.Length);
+
+        //1
+        yield return new WaitForSeconds(1);
+        page.transform.position = movement[RandomInt].position;
+        
+
+    }
 }
         
