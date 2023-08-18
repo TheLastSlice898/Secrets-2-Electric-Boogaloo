@@ -72,13 +72,12 @@ public class GTTS_Stairs : MonoBehaviour
                 winConditionMet = false;
                 Debug.Log("LeftArrow Not Pressed - winConditionMet: " + winConditionMet);
 
-                if (controller != null)
-                {
-                    controller.LossConditionMet();
-                }
-
+            if (!winConditionMet)
+            {
+                lossConditionMet = true;
                 Destroy(gameObject);
             }
+        }
 
 
 
@@ -100,6 +99,7 @@ public class GTTS_Stairs : MonoBehaviour
             if (!winConditionMet)
             {
                 lossConditionMet = true;
+                Destroy(gameObject);
             }
         }
     }
