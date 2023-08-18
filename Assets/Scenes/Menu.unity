@@ -481,8 +481,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 555040941}
-        m_TargetAssemblyTypeName: Credit, Assembly-CSharp
-        m_MethodName: Credits
+        m_TargetAssemblyTypeName: SettingsLoad, Assembly-CSharp
+        m_MethodName: LoadSettings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -539,7 +539,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 555040936}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8082459749a8d1449bc22d02dd0d19da, type: 3}
+  m_Script: {fileID: 11500000, guid: 9272abd2665afcf46becdb0f61fe986a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &810878858
@@ -1301,8 +1301,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1790019480}
-        m_TargetAssemblyTypeName: Exit, Assembly-CSharp
-        m_MethodName: ExitScene
+        m_TargetAssemblyTypeName: ExitGame, Assembly-CSharp
+        m_MethodName: altf4
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1359,7 +1359,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1790019475}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2b6d711ec0bd3e49bd5c86aa114d840, type: 3}
+  m_Script: {fileID: 11500000, guid: 14c918b20df33ef4fbe444a51d03d28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1816644050
@@ -1374,8 +1374,8 @@ GameObject:
   - component: {fileID: 1816644052}
   - component: {fileID: 1816644051}
   m_Layer: 0
-  m_Name: Camera
-  m_TagString: Untagged
+  m_Name: MainCamera
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1682,7 +1682,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8668835104867026621, guid: 8c2721836cba86348ba2add13ba072cd, type: 3}
       propertyPath: Debug
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

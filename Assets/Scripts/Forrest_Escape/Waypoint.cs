@@ -43,7 +43,7 @@ public class Waypoint : MonoBehaviour
             if (currentWaypoint.transform.GetComponent<WinPoint>() != null)
             {
                 PlayerWins = currentWaypoint.transform.GetComponent<WinPoint>().WinReturn();
-                GameManage.GameManager.NextScene();
+                GameManage.GameManager.WinScreen();
             }
 
             return currentWaypoint.transform;
