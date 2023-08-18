@@ -17,7 +17,7 @@ public class PlayerBehaviour : MonoBehaviour
     public int SpawnPosition;
     public bool CanSpawn;
 
-    private List<int> SpawnTimeList = new List<int>() { 117, 114, 113, 110, 108, 107, 104, 102, 100, 100, 98, 95, 93, 92, 91, 91, 90, 88, 87, 85, 85, 84, 82, 81, 80, 79, 79, 78, 77, 75, 74, 73, 73, 72, 71, 69, 69, 68, 67, 66, 65, 64, 63, 62, 61, 61, 59, 59, 57, 55, 54, 52, 50, 48, 48, 47, 46, 45, 43, 42, 42, 40, 37, 37, 36, 36, 35, 35, 34, 33, 32, 30, 28, 27, 25, 24, 24, 22, 20, 20, 19, 19, 18, 17, 17, 16, 14, 14, 12, 12, 10, 9, 8, 7, 6, 5, 4, 3, 2, 2, 2 };
+    private List<int> SpawnTimeList = new List<int>() { 59, 57, 55, 54, 52, 50, 48, 48, 47, 46, 45, 43, 42, 42, 40, 37, 37, 36, 36, 35, 35, 34, 33, 32, 30, 28, 27, 25, 24, 24, 22, 20, 20, 19, 19, 18, 17, 17, 16, 14, 14, 12, 12, 10, 9, 8, 7, 6, 5, 4, 3, 2, 2, 2 };
     public int currentSpawnTimeIndex = 0;
 
     // Start is called before the first frame update
@@ -26,7 +26,7 @@ public class PlayerBehaviour : MonoBehaviour
         PlayerHealth = 3;
         healthUI.text = "HP: " + PlayerHealth;
 
-        TimeRemaining = 120;
+        TimeRemaining = 60;
 
         SpawnPosition = 0;
         currentSpawnTimeIndex = 0;
@@ -69,7 +69,7 @@ public class PlayerBehaviour : MonoBehaviour
         if (other.gameObject.tag == "BossProjectile")
         {
             PlayerHealth -= 1;
-            Debug.Log("Ouchies");
+            //Debug.Log("Ouchies");
 
             Destroy(other.gameObject);
         }
