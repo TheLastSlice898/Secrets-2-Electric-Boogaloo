@@ -31,18 +31,18 @@ public class PotionMakerScript : MonoBehaviour
     private IEnumerator SpawnObjects()
     {
         
-            List<GameObject> allIngredients = new List<GameObject>();                                                                   //Create a list to store all the ingredients
+            List<GameObject> allIngredients = new List<GameObject>();                                                               //Create a list to store all the ingredients
 
-            allIngredients.AddRange(correctIngredients);                                                                                //Add the correct ingredients to the list
-            allIngredients.AddRange(wrongIngredients);                                                                                  //Add the wrong ingredients to the list
+            allIngredients.AddRange(correctIngredients);                                                                            //Add the correct ingredients to the list
+            allIngredients.AddRange(wrongIngredients);                                                                              //Add the wrong ingredients to the list
 
-            ShuffleList(allIngredients);                                                                                                //Shuffle the list of ingredients
+            ShuffleList(allIngredients);                                                                                            //Shuffle the list of ingredients
 
             foreach (GameObject ingredient in allIngredients)
             {
-                GameObject spawnedIngredient = Instantiate(ingredient, GetRandomPositionInArea(), Quaternion.identity);                 //Instantiate the ingredient at the spawn position
+                GameObject spawnedIngredient = Instantiate(ingredient, GetRandomPositionInArea(), Quaternion.identity);             //Instantiate the ingredient at the spawn position
 
-                spawnedIngredient.transform.localScale = ingredientScale;                                                               //Set the scale of the object
+                spawnedIngredient.transform.localScale = ingredientScale;                                                           //Set the scale of the object
 
                 
                 StartCoroutine(OnMouseDown());                                                                                      //Start OnMouseDown coroutine
@@ -50,7 +50,7 @@ public class PotionMakerScript : MonoBehaviour
                 StartCoroutine(TimeoutObject(spawnedIngredient));                                                                   //Start the timeout coroutine for incorrect ingredients, passing the spawned ingredient as an argument
                                                                                                                                    
 
-                yield return new WaitForSeconds(spawnDelay);                                                                            //Wait for a delay before spawning the next ingredient
+                yield return new WaitForSeconds(spawnDelay);                                                                        //Wait for a delay before spawning the next ingredient
             }
             yield return new WaitForSeconds(clickTimeout);                                                                          //Wait for the specified timeout duration
                
@@ -63,7 +63,7 @@ public class PotionMakerScript : MonoBehaviour
         {
             yield return new WaitForSeconds(clickTimeout);
 
-            if (obj && obj.activeSelf)                                                                                                   //Check if the object is still active (not clicked) after the timeout
+            if (obj && obj.activeSelf)                                                                                              //Check if the object is still active (not clicked) after the timeout
             {
 
                 obj.SetActive(false);
@@ -109,7 +109,7 @@ public class PotionMakerScript : MonoBehaviour
 
                     if (clickedCorrectIngredients == correctIngredients.Length)
                     {
-                        GameManage.GameManager.WinScreen();                                                                       //Load the win scene if all correct ingredients have been clicked
+                        GameManage.GameManager.WinScreen();                                                                         //Load the win scene if all correct ingredients have been clicked
                     }
 
                     Destroy(hitObject);
@@ -121,7 +121,7 @@ public class PotionMakerScript : MonoBehaviour
 
                     if (wrongClicks > maxWrongClicks)
                     {
-                        GameManage.GameManager.LoseScreen();                                                                  //Load the game over scene if maximum wrong clicks reached
+                        GameManage.GameManager.LoseScreen();                                                                        //Load the game over scene if maximum wrong clicks reached
                     }
 
                     StartCoroutine(DeactivateAndReactivate(hitObject));                                                             //Start the Coroutine to deactivate and reactivate the object
@@ -167,11 +167,11 @@ public class PotionMakerScript : MonoBehaviour
             {
                 if (!canAppearAgain)
                 {
-                    gameObject.SetActive(false);                                                                                        //Deactivate the game object if it has the tag "Correct_Ingredient" and should not appear again
+                    gameObject.SetActive(false);                                                                                    //Deactivate the game object if it has the tag "Correct_Ingredient" and should not appear again
                 }
                 else
                 {
-                    canAppearAgain = true;                                                                                              //Set the canAppearAgain flag to true if the game object can appear again
+                    canAppearAgain = true;                                                                                          //Set the canAppearAgain flag to true if the game object can appear again
                 }
             }
 
