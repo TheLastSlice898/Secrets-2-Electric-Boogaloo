@@ -13,7 +13,7 @@ public class GTTS_Controller : MonoBehaviour
     private int winConditionsMet = 0;
     private int lossConditionsMet = 0;
     private GameObject activeObject;
-    public float prefabLifetime = 10f; // Lifetime of each prefab
+    public float prefabLifetime = 1f; // Lifetime of each prefab
 
     private void Start()
     {
@@ -28,8 +28,8 @@ public class GTTS_Controller : MonoBehaviour
         if (winConditionsMet >= maxWinConditions)
         {
             GameManage.GameManager.WinScreen();                                                                       //Load the win scene if all correct ingredients have been clicked
-        
-    }
+
+        }
         else
         {
             SpawnRandomPrefab();
@@ -40,20 +40,17 @@ public class GTTS_Controller : MonoBehaviour
     {
         lossConditionsMet++;
         if (lossConditionsMet >= maxLossConditions)
-        { 
+        {
             GameManage.GameManager.LoseScreen();                                                                       //Load the win scene if all correct ingredients have been clicked
         }
         else
         {
             SpawnRandomPrefab();
         }
+        hpSlider.value = lossConditionsMet;
     }
 
-    private IEnumerator TimeoutObject(GameObject obj)
-    {
-        yield return new WaitForSeconds(prefabLifetime);
-        LossConditionMet(); // Called when prefab lifetime expires
-    }
+
 
     private void SpawnRandomPrefab()
     {
@@ -85,5 +82,10 @@ public class GTTS_Controller : MonoBehaviour
         }
 
         StartCoroutine(TimeoutObject(activeObject));
+    }
+    private IEnumerator TimeoutObject(GameObject obj)
+    {
+        yield return new WaitForSeconds(prefabLifetime);
+        LossConditionMet(); // Called when prefab lifetime expires
     }
 }

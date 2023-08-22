@@ -153,7 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pixieGrowl: {fileID: 0}
   winConditionMet: 0
-  lossConditionMet: 0
+  lossConditionMet: 1
   controller: {fileID: 0}
 --- !u!82 &5974542413164082590
 AudioSource:
