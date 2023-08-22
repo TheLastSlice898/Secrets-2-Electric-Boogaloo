@@ -7,7 +7,7 @@ using TMPro;
 public class CatchTheBook : MonoBehaviour
 {
     public TextMeshProUGUI healthBox;
-    int bookHealth; 
+    public int bookHealth; 
     //variable for the health of the book, which relates to our win condition, as well as a UI element link so we can display it to the player
 
     public float secondCounter; //keeps track of the number of seconds that has passed. Resets upon certain conditions
@@ -25,13 +25,16 @@ public class CatchTheBook : MonoBehaviour
     public GameObject rightBookshelf; 
     public int rumbleTime; 
     public bool canRumble; 
+
+    public GameObject BookHealth1; 
+    public GameObject BookHealth2; 
     
 
     // Start is called before the first frame update
     void Start()
     {
         bookHealth = 3; 
-        healthBox.text = "Book HP: " + bookHealth; 
+        //healthBox.text = "Book HP: " + bookHealth; 
         //Ensures the Book's health is reset when the scene loads, as well as updating the UI
         
         BookOnLeft = true; 
@@ -49,6 +52,9 @@ public class CatchTheBook : MonoBehaviour
 
         RandomiseFlyTime(); 
         //triggers the function to randomise the time that the book flies 
+
+        BookHealth1.SetActive(false); 
+        BookHealth2.SetActive(false); 
     }
 
     // Update is called once per frame
@@ -82,7 +88,7 @@ public class CatchTheBook : MonoBehaviour
         //the behaviour for when the player catches the book
         if(Input.GetKeyDown("space") && BookIsFlying == true) {
             bookHealth -= 1; //lowers the health
-            healthBox.text = "Book HP: " + bookHealth; //updates the UI
+            //healthBox.text = "Book HP: " + bookHealth; //updates the UI
              
             secondCounter = 0f; //resets the secondCounter
             //FlyTime = 100; 
@@ -104,6 +110,20 @@ public class CatchTheBook : MonoBehaviour
             timeBox.text = "Time Remaining: " + loseTimer;
         }
         //fuck you Paul
+
+        if(bookHealth == 2) {
+            BookHealth1.SetActive(false); 
+            BookHealth2.SetActive(true); 
+        }
+
+        if(bookHealth == 1) {
+            BookHealth2.SetActive(false); 
+        }
+
+        if(bookHealth == 3) {
+            BookHealth1.SetActive(true);
+            BookHealth2.SetActive(true); 
+        }
         
 
         if(BookIsFlying == true && BookOnLeft == true) {
