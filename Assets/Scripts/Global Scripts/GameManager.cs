@@ -29,8 +29,6 @@ public class GameManage : MonoBehaviour
     public bool UnlockedPotion;
     public bool UnlockedToTheTop;
     public bool UnlockedBoss;
-
-    public AudioMixer MasterAudio;
     //This is the event bus and enables me to access this script from anywhere
     //This also states that if their is another one of this script in the scene delete the obj
     private static GameManage _GameManager;
