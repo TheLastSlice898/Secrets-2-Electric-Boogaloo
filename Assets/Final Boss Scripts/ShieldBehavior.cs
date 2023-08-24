@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ShieldBehavior : MonoBehaviour
 {
+    public AudioSource BlockSource; 
+    public AudioClip BlockNoise; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +45,7 @@ public class ShieldBehavior : MonoBehaviour
             //Debug.Log("No ouchies >:c"); 
 
             Destroy(other.gameObject);
+            BlockSource.PlayOneShot(BlockNoise); 
         }
     }
 }

@@ -20,11 +20,18 @@ public class PlayerBehaviour : MonoBehaviour
     private List<int> SpawnTimeList = new List<int>() { 59, 57, 55, 54, 52, 50, 48, 48, 47, 46, 45, 43, 42, 42, 40, 37, 37, 36, 36, 35, 35, 34, 33, 32, 30, 28, 27, 25, 24, 24, 22, 20, 20, 19, 19, 18, 17, 17, 16, 14, 14, 12, 12, 10, 9, 8, 7, 6, 5, 4, 3, 2, 2, 2 };
     public int currentSpawnTimeIndex = 0;
 
+    public GameObject PlayerHealth1; 
+    public GameObject PlayerHealth2; 
+
+    public AudioSource PlayerSoundSources; 
+    public AudioClip BossMusic; 
+    public AudioClip DamageSound; 
+
     // Start is called before the first frame update
     void Start()
     {
         PlayerHealth = 3;
-        healthUI.text = "HP: " + PlayerHealth;
+        //healthUI.text = "HP: " + PlayerHealth;
 
         TimeRemaining = 60;
 
@@ -36,7 +43,7 @@ public class PlayerBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthUI.text = "HP: " + PlayerHealth;
+        //healthUI.text = "HP: " + PlayerHealth;
 
         TimeRemaining -= Time.deltaTime;
         timeBox.text = "Time Remaining: " + (int)TimeRemaining;
@@ -58,6 +65,20 @@ public class PlayerBehaviour : MonoBehaviour
             CanSpawn = true;
         }
 
+        if(PlayerHealth == 2) {
+            PlayerHealth1.SetActive(false); 
+            PlayerHealth2.SetActive(true); 
+        }
+
+        if(PlayerHealth == 1) {
+            PlayerHealth2.SetActive(false); 
+        }
+
+        if(PlayerHealth == 3) {
+            PlayerHealth1.SetActive(true);
+            PlayerHealth2.SetActive(true); 
+        }
+
         if (PlayerHealth <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -72,6 +93,7 @@ public class PlayerBehaviour : MonoBehaviour
             //Debug.Log("Ouchies");
 
             Destroy(other.gameObject);
+            PlayerSoundSources.PlayOneShot(DamageSound);
         }
     }
 
