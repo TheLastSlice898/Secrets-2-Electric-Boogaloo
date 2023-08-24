@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ public class GameManage : MonoBehaviour
     
     public string SceneName;        //SceneName of the current Scene
     public string[] SceneOrder;     //States the order of the scenes in a array        
+    public AudioClip[] MusicClips;
     public int SceneInt;            //a int represetning the current buildscene
     public bool bookbool;               //a bool to check if the instrcution book is active 
     public bool Debug;              //bool for debug menu for testing
@@ -28,7 +30,7 @@ public class GameManage : MonoBehaviour
     public bool UnlockedToTheTop;
     public bool UnlockedBoss;
 
-
+    public AudioMixer MasterAudio;
     //This is the event bus and enables me to access this script from anywhere
     //This also states that if their is another one of this script in the scene delete the obj
     private static GameManage _GameManager;
@@ -46,6 +48,8 @@ public class GameManage : MonoBehaviour
             _GameManager = this;
             DontDestroyOnLoad(gameObject);
         }
+        SceneName = SceneManager.GetActiveScene().name;
+        GameManage.GameManager.GetComponent<Music_Syste3m>().MusicPlay();
     }
 
     void Start()
@@ -73,6 +77,7 @@ public class GameManage : MonoBehaviour
         {
             DebugOBJ.SetActive(Debug);
         }
+
 
         //see line 139 for function info
 
@@ -169,6 +174,7 @@ public class GameManage : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+        SceneName = "Menu";
         PauseMenu = false;
         bookbool = false;
         Time.timeScale = 1;

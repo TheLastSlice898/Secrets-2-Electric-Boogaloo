@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class Settings : MonoBehaviour
 {
@@ -15,15 +16,15 @@ public class Settings : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        AudioListener MasterAudio = Camera.main.gameObject.GetComponent<AudioListener>();
+        
+        
         if (SoundToggle)
         {
-            MasterAudio.enabled = SoundToggle;
+            AudioListener.volume = 1;
         }
         else
         {
-            MasterAudio.enabled = SoundToggle;
+            AudioListener.volume = 0f;
         }
 
 

@@ -8,12 +8,14 @@ public class PlayerController : MonoBehaviour
 {
 
     public Rigidbody PlayerRB;
+    public Animator DogAnim;
     public GameObject PlayerOBJ;
     public float MaxSpeed = 20;
     public float JumpHeight = 10;
     public bool HasJumped;
     public bool DoubleJump;
     public float playerForce;
+    public float inputValue;
     
 
     // Start is called before the first frame update
@@ -23,6 +25,9 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
+        DogAnim.SetFloat("PlayerDir", inputValue * 2);
+        DogAnim.SetBool("Jump", HasJumped);
+
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             Jump();
@@ -35,10 +40,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
+
+        //animator values
         float MoveX = Input.GetAxis("Horizontal");
-        //Debug.Log(MoveX
-        //PlayerRB.velocity.Normalize();
-        
+        inputValue = MoveX;
+
         
         
         PlayerRB.velocity = new Vector3(MoveX * playerForce,PlayerRB.velocity.y,PlayerRB.velocity.z);
