@@ -3723,7 +3723,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 524f50b4ceaa1714fa5acd2cd3440246, type: 2}
+      objectReference: {fileID: 2100000, guid: 5d7b4b3569972024eb3508f53b5d2eda, type: 2}
     - target: {fileID: 919132149155446097, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
       propertyPath: m_Name
       value: Bottle_Model (3)
@@ -3949,7 +3949,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 524f50b4ceaa1714fa5acd2cd3440246, type: 2}
+      objectReference: {fileID: 2100000, guid: baceaf026039f264f8ea9cb08656a058, type: 2}
     - target: {fileID: 919132149155446097, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
       propertyPath: m_Name
       value: Bottle_Model (7)
@@ -4278,7 +4278,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 524f50b4ceaa1714fa5acd2cd3440246, type: 2}
+      objectReference: {fileID: 2100000, guid: baceaf026039f264f8ea9cb08656a058, type: 2}
     - target: {fileID: 919132149155446097, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
       propertyPath: m_Name
       value: Bottle_Model (5)
@@ -6131,7 +6131,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 524f50b4ceaa1714fa5acd2cd3440246, type: 2}
+      objectReference: {fileID: 2100000, guid: 5d7b4b3569972024eb3508f53b5d2eda, type: 2}
     - target: {fileID: 919132149155446097, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
       propertyPath: m_Name
       value: Bottle_Model (1)
@@ -8293,7 +8293,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 524f50b4ceaa1714fa5acd2cd3440246, type: 2}
+      objectReference: {fileID: 2100000, guid: baceaf026039f264f8ea9cb08656a058, type: 2}
     - target: {fileID: 919132149155446097, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
       propertyPath: m_Name
       value: Bottle_Model (8)
@@ -10183,7 +10183,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 524f50b4ceaa1714fa5acd2cd3440246, type: 2}
+      objectReference: {fileID: 2100000, guid: 5d7b4b3569972024eb3508f53b5d2eda, type: 2}
     - target: {fileID: 919132149155446097, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
       propertyPath: m_Name
       value: Bottle_Model (2)
@@ -10478,162 +10478,6 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015638541}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!1001 &1022255418
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1037539312}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
-      propertyPath: m_RootOrder
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 243.11006
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 243.11003
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 243.11003
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.16178161
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.1699104
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.946363
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071067
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 524f50b4ceaa1714fa5acd2cd3440246, type: 2}
-    - target: {fileID: 919132149155446097, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
-      propertyPath: m_Name
-      value: Bottle_Model (9)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1022255423}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1022255422}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1022255421}
-  m_SourcePrefab: {fileID: 100100000, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
---- !u!4 &1022255419 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
-  m_PrefabInstance: {fileID: 1022255418}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1022255420 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
-  m_PrefabInstance: {fileID: 1022255418}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1022255421
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022255420}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.0033603716, y: 0.0033603713, z: 0.0057796845}
-  m_Center: {x: -5.820766e-11, y: 1.1641529e-10, z: 0.0028398423}
---- !u!114 &1022255422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022255420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47f257624e94a94c9ae06646954219c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!54 &1022255423
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022255420}
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
@@ -11085,7 +10929,6 @@ Transform:
   - {fileID: 1510884503}
   - {fileID: 350848605}
   - {fileID: 795746120}
-  - {fileID: 1022255419}
   - {fileID: 1323305263}
   - {fileID: 1270747223}
   - {fileID: 1745138212}
@@ -13194,7 +13037,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 524f50b4ceaa1714fa5acd2cd3440246, type: 2}
+      objectReference: {fileID: 2100000, guid: baceaf026039f264f8ea9cb08656a058, type: 2}
     - target: {fileID: 919132149155446097, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
       propertyPath: m_Name
       value: Bottle_Model (4)
@@ -13695,7 +13538,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 524f50b4ceaa1714fa5acd2cd3440246, type: 2}
+      objectReference: {fileID: 2100000, guid: baceaf026039f264f8ea9cb08656a058, type: 2}
     - target: {fileID: 919132149155446097, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
       propertyPath: m_Name
       value: Bottle_Model (11)
@@ -14405,7 +14248,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 524f50b4ceaa1714fa5acd2cd3440246, type: 2}
+      objectReference: {fileID: 2100000, guid: baceaf026039f264f8ea9cb08656a058, type: 2}
     - target: {fileID: 919132149155446097, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
       propertyPath: m_Name
       value: Bottle_Model (10)
@@ -15908,7 +15751,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 524f50b4ceaa1714fa5acd2cd3440246, type: 2}
+      objectReference: {fileID: 2100000, guid: 5d7b4b3569972024eb3508f53b5d2eda, type: 2}
     - target: {fileID: 919132149155446097, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
       propertyPath: m_Name
       value: Bottle_Model (6)
@@ -17745,7 +17588,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 524f50b4ceaa1714fa5acd2cd3440246, type: 2}
+      objectReference: {fileID: 2100000, guid: baceaf026039f264f8ea9cb08656a058, type: 2}
     - target: {fileID: 919132149155446097, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
       propertyPath: m_Name
       value: Bottle_Model (12)
@@ -18529,7 +18372,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 524f50b4ceaa1714fa5acd2cd3440246, type: 2}
+      objectReference: {fileID: 2100000, guid: 5d7b4b3569972024eb3508f53b5d2eda, type: 2}
     - target: {fileID: 919132149155446097, guid: ea69a81d39671314b91e0cb67dcd1a2a, type: 3}
       propertyPath: m_Name
       value: Bottle_Model
