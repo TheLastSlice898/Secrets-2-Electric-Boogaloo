@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 4003e771857201547a167d051e088f4d, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -17370,8 +17370,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697398965}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 1.0715, z: 1}
-  m_LocalScale: {x: 0.10038099, y: 0.006692066, z: 0.10038099}
+  m_LocalPosition: {x: 1.0001, y: 1.0883, z: 0.99987}
+  m_LocalScale: {x: 0.15538977, y: 0.010359318, z: 0.15538977}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1231139465}
@@ -17441,8 +17441,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.5199155, y: 11.918283, z: 1.4591844}
-  m_Center: {x: -0.0017437022, y: 4.959141, z: 0.0023130265}
+  m_Size: {x: 1.5199155, y: 14.808624, z: 1.4591844}
+  m_Center: {x: -0.0017436707, y: 3.5139754, z: 0.0023130644}
 --- !u!114 &1697398976
 MonoBehaviour:
   m_ObjectHideFlags: 0
