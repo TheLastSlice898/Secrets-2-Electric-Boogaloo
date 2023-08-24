@@ -23,6 +23,10 @@ public class PlayerBehaviour : MonoBehaviour
     public GameObject PlayerHealth1; 
     public GameObject PlayerHealth2; 
 
+    public AudioSource PlayerSoundSources; 
+    public AudioClip BossMusic; 
+    public AudioClip DamageSound; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -89,6 +93,7 @@ public class PlayerBehaviour : MonoBehaviour
             //Debug.Log("Ouchies");
 
             Destroy(other.gameObject);
+            PlayerSoundSources.PlayOneShot(DamageSound);
         }
     }
 

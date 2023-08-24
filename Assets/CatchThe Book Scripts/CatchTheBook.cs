@@ -29,6 +29,10 @@ public class CatchTheBook : MonoBehaviour
     public GameObject BookHealth1; 
     public GameObject BookHealth2; 
     
+    public AudioSource BookSoundSource; 
+    public AudioClip BookMusic; 
+    public AudioClip BookDamage; 
+    public AudioClip ShelfRumble; 
 
     // Start is called before the first frame update
     void Start()
@@ -77,12 +81,14 @@ public class CatchTheBook : MonoBehaviour
             //Debug.Log("Shake your booky maker"); 
             leftBookshelf.GetComponent<Animator>().SetTrigger("BookTrigger"); 
             canRumble = false; 
+            BookSoundSource.PlayOneShot(ShelfRumble);
         }
 
         if(secondCounter >= rumbleTime && FlyTime >= 7 && BookIsFlying == false && canRumble == true && BookOnRight == true) {
             //Debug.Log("Shake your booky maker"); 
             rightBookshelf.GetComponent<Animator>().SetTrigger("BookTrigger"); 
             canRumble = false; 
+            BookSoundSource.PlayOneShot(ShelfRumble);
         }
 
         //the behaviour for when the player catches the book
@@ -92,6 +98,8 @@ public class CatchTheBook : MonoBehaviour
              
             secondCounter = 0f; //resets the secondCounter
             //FlyTime = 100; 
+
+            BookSoundSource.PlayOneShot(BookDamage);
 
             //if statement to swap the onLeft and onRight variables to relfect which is true, so certain functions fire correctly 
             if(BookOnLeft == true) { 
