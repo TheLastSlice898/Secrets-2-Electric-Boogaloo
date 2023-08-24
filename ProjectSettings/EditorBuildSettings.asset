@@ -26,9 +26,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Potion.unity
     guid: 1c6deed62f295624690eb6d205149c5c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ToTheBoss.unity
-    guid: 9d74121f45c46664ea482fb2db732e19
+    guid: a00970c6709972f46b99103a73c42470
+  - enabled: 1
+    path: Assets/Scenes/Get_To_The_Static.unity
+    guid: 21e05c6ffef9f164baa15caff7c47b5c
   - enabled: 1
     path: Assets/Scenes/Boss.unity
     guid: 088fc12831cc7854fb4822541dba93a8
@@ -41,7 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels.unity
     guid: 1893cc527a2abd74cb291a0decc905df
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Debug.unity
     guid: c200e2937ec843d4992435e1dcd2e901
   - enabled: 1

@@ -211,7 +211,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bc83838f38b9a294580ad673858f4c2d, type: 2}
+  - {fileID: 2100000, guid: 07f57e88b8546ba49b2ac1458d3800db, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -313,7 +313,7 @@ PrefabInstance:
     - target: {fileID: -7918335002988649766, guid: 9d37317a90081524c991507ee8482309, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4b188eb11a24c4d469e3aa48e93dd9f3, type: 2}
+      objectReference: {fileID: 2100000, guid: 95a3db5136f07db408a8d38faf11b975, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d37317a90081524c991507ee8482309, type: 3}
       propertyPath: m_Name
       value: Stairs_Model

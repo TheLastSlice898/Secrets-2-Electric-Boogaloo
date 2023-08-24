@@ -54,7 +54,7 @@ public class Music_Syste3m : MonoBehaviour
             MusicPlayer.clip = CurrentClip;
             MusicPlayer.Play();
         }
-        if (LaSceneName == "ToTheBoss")
+        if (LaSceneName == "Get_To_The_Static")
         {
             CurrentClip = GameManage.GameManager.MusicClips[7];
             MusicPlayer.clip = CurrentClip;

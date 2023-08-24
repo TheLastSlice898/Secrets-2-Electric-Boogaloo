@@ -14,6 +14,9 @@ public class GTTS_Stairs : MonoBehaviour
     
     public bool winConditionMet;
     public bool lossConditionMet;
+
+    public int Side;
+
     public GTTS_Controller controller;
 
     // Start is called before the first frame update
@@ -21,17 +24,25 @@ public class GTTS_Stairs : MonoBehaviour
     {
         controller = GameObject.FindObjectOfType<GTTS_Controller>();
         voiceSource = gameObject.GetComponent<AudioSource>();
+        GenerateSide();
         PlayRandomClip();
         Debug.Log("playing Audio");
 
 
     }
 
+
+public void GenerateSide()
+{
+Side = Random.Range(1,2);
+}
+
+
   public void PlayRandomClip()
 
     {
 
-        if (Random.Range(0, 2) == 0)
+        if (Side == 1)
 
         {
 
@@ -41,7 +52,7 @@ public class GTTS_Stairs : MonoBehaviour
             Debug.Log("leftClip");
         }
 
-        else 
+        if (Side == 2) 
 
         {
 
@@ -54,53 +65,36 @@ public class GTTS_Stairs : MonoBehaviour
    
     private void Update()
     {
-            
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && voiceSource.clip == leftVoice)
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && Side == 1)
+        {
+            controller.WinConditionMet();
+            Debug.Log("LeftArrow Pressed - winConditionMet: " + winConditionMet);
+            Destroy(gameObject);
+        }
+
+        else if (Input.GetKeyDown(KeyCode.RightArrow) && Side == 1)
+         {
+         winConditionMet = false;
+         controller.LossConditionMet();
+         Debug.Log("LeftArrow Not Pressed - winConditionMet: " + winConditionMet);
+         }
+
+
+
+
+       if (Input.GetKeyDown(KeyCode.RightArrow) && Side == 2)
             {
-                winConditionMet = true;
-                Debug.Log("LeftArrow Pressed - winConditionMet: " + winConditionMet);
-
-                if (controller != null)
-                {
-                    controller.WinConditionMet();
-                }
-
+            controller.WinConditionMet();
+            Debug.Log("LeftArrow Pressed - winConditionMet: " + winConditionMet);
                 Destroy(gameObject);
             }
-            else if (Input.anyKeyDown && !Input.GetKeyDown(KeyCode.LeftArrow) && voiceSource.clip == leftVoice)
+            else if (Input.GetKeyDown(KeyCode.LeftArrow) && Side == 2)
             {
                 winConditionMet = false;
+            controller.LossConditionMet();
                 Debug.Log("LeftArrow Not Pressed - winConditionMet: " + winConditionMet);
-
-            if (!winConditionMet)
-            {
-                lossConditionMet = true;
-                Destroy(gameObject);
-            }
-        }
-
-
-
-
-        if (Input.GetKeyDown(KeyCode.RightArrow) && voiceSource.clip == rightVoice)
-        {
-            winConditionMet = true;
-            Debug.Log("RightArrow Pressed - winConditionMet: " + winConditionMet);
-
-            Destroy(gameObject);
-         
-        }
-        else if (Input.anyKeyDown && !Input.GetKeyDown(KeyCode.LeftArrow) && voiceSource.clip == rightVoice)
-        {
-            winConditionMet = false;
-            Debug.Log("RightArrow Not Pressed - winConditionMet: " + winConditionMet);
-
-            Destroy(gameObject);
-            if (!winConditionMet)
-            {
-                lossConditionMet = true;
-                Destroy(gameObject);
             }
         }
     }
-}
+

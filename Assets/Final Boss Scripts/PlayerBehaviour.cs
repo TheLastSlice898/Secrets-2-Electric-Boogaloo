@@ -24,7 +24,7 @@ public class PlayerBehaviour : MonoBehaviour
     public GameObject PlayerHealth2; 
 
     public AudioSource PlayerSoundSources; 
-    public AudioClip BossMusic; 
+    //public AudioClip BossMusic; 
     public AudioClip DamageSound; 
 
     // Start is called before the first frame update

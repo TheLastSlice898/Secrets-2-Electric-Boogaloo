@@ -12,7 +12,7 @@ public class GTTS_Controller : MonoBehaviour
     public int maxWinConditions = 10; // Change to 10
     private int winConditionsMet = 0;
     private int lossConditionsMet = 0;
-    private GameObject activeObject;
+    public GameObject activeObject;
     public float prefabLifetime = 1f; // Lifetime of each prefab
 
     private void Start()
@@ -59,7 +59,7 @@ public class GTTS_Controller : MonoBehaviour
             Destroy(activeObject);
         }
 
-        int randomIndex = Random.Range(0, sceneObjects.Length);
+        int randomIndex = Random.Range(0, 2);
         GameObject randomPrefab = sceneObjects[randomIndex];
         activeObject = Instantiate(randomPrefab, spawnLocation.position, spawnLocation.rotation);
 
