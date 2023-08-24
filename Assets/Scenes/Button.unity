@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: 4003e771857201547a167d051e088f4d, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: a929c95a2dd500e4b8edb3dcddd64dc0, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -7922,6 +7922,71 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1001 &722914467
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 181987929251139525, guid: 8c2721836cba86348ba2add13ba072cd, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991357488085720986, guid: 8c2721836cba86348ba2add13ba072cd, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991357488085720986, guid: 8c2721836cba86348ba2add13ba072cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 823.1322
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991357488085720986, guid: 8c2721836cba86348ba2add13ba072cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 143.66553
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991357488085720986, guid: 8c2721836cba86348ba2add13ba072cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -72.44394
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991357488085720986, guid: 8c2721836cba86348ba2add13ba072cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991357488085720986, guid: 8c2721836cba86348ba2add13ba072cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991357488085720986, guid: 8c2721836cba86348ba2add13ba072cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991357488085720986, guid: 8c2721836cba86348ba2add13ba072cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991357488085720986, guid: 8c2721836cba86348ba2add13ba072cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991357488085720986, guid: 8c2721836cba86348ba2add13ba072cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991357488085720986, guid: 8c2721836cba86348ba2add13ba072cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8668835104867026621, guid: 8c2721836cba86348ba2add13ba072cd, type: 3}
+      propertyPath: PauseMenu
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8c2721836cba86348ba2add13ba072cd, type: 3}
 --- !u!1 &763833473 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7029948723529949830, guid: 700f4fce891ada7489ef3093d8a2d13a, type: 3}
