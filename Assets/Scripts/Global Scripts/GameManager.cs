@@ -111,6 +111,7 @@ public class GameManage : MonoBehaviour
         {
             //changes the sprite from the book inscruction array
             BookSprite.sprite = BookInstructions.GetComponent<Instructions>().BookStates[0];
+            Time.timeScale = 1;
         }
     }
     //basic unary negation

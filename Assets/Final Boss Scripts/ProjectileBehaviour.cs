@@ -10,7 +10,7 @@ public class ProjectileBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        projSpeed = Random.Range(0.5f,2);
+        projSpeed = Random.Range(0.5f,.8f);
     }
 
     // Update is called once per frame

@@ -48,6 +48,11 @@ public class PlayerBehaviour : MonoBehaviour
         TimeRemaining -= Time.deltaTime;
         timeBox.text = "Time Remaining: " + (int)TimeRemaining;
 
+        if (TimeRemaining <= 0) 
+        {
+            GameManage.GameManager.WinScreen();
+        }
+
         if ((int)TimeRemaining == SpawnTimeList[currentSpawnTimeIndex] && CanSpawn == true)
         {
             SpawnProjectile();
@@ -83,6 +88,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        
     }
 
     void OnTriggerEnter(Collider other)
