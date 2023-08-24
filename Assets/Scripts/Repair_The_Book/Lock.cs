@@ -62,7 +62,7 @@ public class Lock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(CardTotal == 6) 
+        if(CardTotal == 11) 
         {
             GameManage.GameManager.WinScreen();
             //Debug.Log("op");
